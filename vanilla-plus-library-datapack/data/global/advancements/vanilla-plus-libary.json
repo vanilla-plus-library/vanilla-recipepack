@@ -1,0 +1,18 @@
+{
+    "display": {
+        "title": "Vanilla+ Library",
+        "description": "Datapack Features for World Generation and more.",
+        "icon": {
+            "item": "minecraft:player_head",
+            "nbt": "{SkullOwner: 'Kevos'}"
+        },
+        "announce_to_chat": false,
+        "show_toast": false
+    },
+    "parent": "global:the-wii",
+    "criteria": {
+        "trigger": {
+            "trigger": "minecraft:tick"
+        }
+    }
+}

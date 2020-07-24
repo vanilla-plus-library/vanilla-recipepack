@@ -1,0 +1,2 @@
+execute unless block ~ ~-4 ~ #vp_library:generation/descend_through run function vp_library:generation/struct_gen/surface/descend_1
+execute positioned ~ ~-4 ~ if block ~ ~ ~ #vp_library:generation/descend_through run function vp_library:generation/struct_gen/surface/descend_4
