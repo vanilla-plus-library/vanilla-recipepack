@@ -10,4 +10,4 @@ execute at @s positioned ~ ~ ~-16 unless block ~ 1 ~ barrier run summon area_eff
 
 execute at @s run kill @e[type=area_effect_cloud,tag=vp_library.chunk_scan,distance=..1]
 
-execute at @s run function vp_library:generation/generate_chunk
+execute at @s run function thewii:vp_library/generation/generate_chunk

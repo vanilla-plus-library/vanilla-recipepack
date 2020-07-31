@@ -1,0 +1,2 @@
+execute as @a[scores={twvp.coas=-2147483648..}] run function thewii:vp_library/click_detections/coas_fwoas/clicked
+execute as @a[scores={twvp.wfoas=-2147483648..}] run function thewii:vp_library/click_detections/coas_fwoas/clicked

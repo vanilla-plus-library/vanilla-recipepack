@@ -1,0 +1,9 @@
+{
+    "values": [
+        "thewii:vp_library/loaded_chunk/load",
+        "thewii:vp_library/click_detections/load",
+        "thewii:vp_library/math/load",
+        "thewii:vp_library/block_placement/load",
+        "thewii:vp_library/generation/load"
+    ]
+}

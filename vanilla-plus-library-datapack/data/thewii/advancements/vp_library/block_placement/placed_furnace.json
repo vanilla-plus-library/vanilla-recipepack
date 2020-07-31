@@ -1,0 +1,18 @@
+{
+    "criteria": {
+        "place": {
+            "trigger": "minecraft:placed_block",
+            "conditions": {
+                "block": "minecraft:blast_furnace"
+            }
+        }
+    },
+    "requirements": [
+        [
+            "place"
+        ]
+    ],
+    "rewards": {
+        "function": "thewii:vp_library/block_placement/start"
+    }
+}

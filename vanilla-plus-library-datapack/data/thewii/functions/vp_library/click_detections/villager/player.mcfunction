@@ -1,0 +1,2 @@
+execute unless entity @s[tag=twvp.villager_prepared] run function thewii:vp_library/click_detections/villager/prepare
+execute if entity @s[tag=twvp.villager_prepared] run function thewii:vp_library/click_detections/villager/teleport

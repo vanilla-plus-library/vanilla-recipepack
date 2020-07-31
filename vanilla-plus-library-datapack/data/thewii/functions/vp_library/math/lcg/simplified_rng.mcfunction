@@ -1,5 +1,5 @@
-scoreboard players operation #lcg vp_math *= #lcg.constant vp_math
-scoreboard players add #lcg vp_math 12345
-scoreboard players operation #result vp_math = #lcg vp_math
+scoreboard players operation #lcg twvp.math *= #lcg.constant twvp.math
+scoreboard players add #lcg twvp.math 12345
+scoreboard players operation #result twvp.math = #lcg twvp.math
 
-scoreboard players operation #result vp_math %= #range vp_math
+scoreboard players operation #result twvp.math %= #range twvp.math
