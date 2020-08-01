@@ -9,4 +9,4 @@ execute if score $struct_gen twvp.data matches 1 run function thewii:vp_library/
 # Generate ores
 execute if score $ore_gen twvp.data matches 1 run function thewii:vp_library/generation/ore_gen/get_orelist
 
-scoreboard players add #chunks_in_a_row twvp.temp 1
+scoreboard players add #chunks_in_a_row twvp.data 1

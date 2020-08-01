@@ -1,5 +1,5 @@
 {
     "values": [
-        "thewii:vp_library/click_detections/tick"
+        "#thewii:vp_library/core/tick_modules"
     ]
 }
