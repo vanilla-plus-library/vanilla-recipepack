@@ -5,11 +5,14 @@
 #  |_______ Overhauls, many new features, complete changes.
 
 
-# Lantern Load
-scoreboard players set #thewii.vplib.core load 000500
-
-# Version
-data modify storage thewii:vp_library/data version set value "0.5 alpha"
-
 # Reset temporary objective
 scoreboard players reset * twvp.temp
+
+# Lantern Load
+scoreboard players set #thewii.vplib.core load 000600
+
+# Update
+execute if data storage thewii:vp_library/data version unless data storage thewii:vp_library/data {version:"0.6 alpha"} run function thewii:vp_library/core/update
+
+# Version
+data modify storage thewii:vp_library/data version set value "0.6 alpha"
