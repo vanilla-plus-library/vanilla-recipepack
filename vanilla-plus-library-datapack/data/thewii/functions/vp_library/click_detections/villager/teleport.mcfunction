@@ -1,5 +1,5 @@
 scoreboard players operation #id twvp.temp = @s twvp.id
-execute as @e[type=villager,tag=twvp.villager] if score @s vp_id = #id twvp.temp run tag @s add twvp.villager.matched
+execute as @e[type=villager,tag=twvp.villager] if score @s twvp.id = #id twvp.temp run tag @s add twvp.villager.matched
 
 execute anchored eyes positioned ^ ^ ^ rotated ~ 0 positioned ~ ~-1 ~ run tp @e[type=villager,tag=twvp.villager.matched,tag=twvp.villager_front] ^ ^ ^0.85
 execute anchored eyes positioned ^ ^ ^ positioned ~ ~-1 ~ run tp @e[type=villager,tag=twvp.villager.matched,tag=twvp.villager_center] ~ ~ ~
