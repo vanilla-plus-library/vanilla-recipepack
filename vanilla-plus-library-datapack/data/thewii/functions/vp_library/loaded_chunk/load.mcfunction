@@ -1,3 +1,5 @@
+say Loaded chunkss
+
 # Lantern Load
 scoreboard players operation #thewii.vplib.loaded_chunk load = #thewii.vplib.core load
 
