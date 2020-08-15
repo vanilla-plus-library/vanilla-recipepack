@@ -10,3 +10,6 @@ The current available modules are:
 - **Math:** Adds a LCG for PRNG purpose. 
 - **Inventory:** Adds a custom damage system and functions to damage mainhand, offhand and any slot in the inventory. It also adds some basic functions to draw/insert items from containers. **(Requires Loaded Chunk)**
 - **Generation:** Adds a world generation system to generate ores and structures using mcfunction. It's currently unused and probably will be removed and replaced by 1.16 WorldGen. **(Requires Math)**
+
+It also has some useful external-datapacks merged into it to reduce the number of datapacks installed. They are:
+- **Minecraft Raycast Collision Detection.**
