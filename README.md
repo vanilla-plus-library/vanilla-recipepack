@@ -8,5 +8,5 @@ The current available modules are:
 - **Click Detections:** Adds a system to detect right-click with carrots on a sticks and warped fungus on a stick. It also adds a villager click system.
 - **Block Placement:** Adds a way to simulate custom block placement using Blast Furnaces with a known Lock id.
 - **Math:** Adds a LCG for PRNG purpose. 
-- **Inventory:** Adds a custom damage system and functions to damage mainhand, offhand and any slot in the inventory. It also adds some basic functions to draw/insert items from containers.
-- **Generation:** Adds a world generation system to generate ores and structures using mcfunction. It's currently unused and probably will be removed and replaced by 1.16 WorldGen.
+- **Inventory:** Adds a custom damage system and functions to damage mainhand, offhand and any slot in the inventory. It also adds some basic functions to draw/insert items from containers. **(Requires Loaded Chunk)**
+- **Generation:** Adds a world generation system to generate ores and structures using mcfunction. It's currently unused and probably will be removed and replaced by 1.16 WorldGen. **(Requires Math)**
