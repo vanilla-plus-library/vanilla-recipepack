@@ -1,3 +1,6 @@
+# Install core module
+execute unless data storage thewii:vp_library/data modules run function thewii:vp_library/core/install
+
 scoreboard players set #dependencies twvp.temp 0
 execute store result score #dependencies twvp.temp run data get storage thewii:vp_library/data modules.inventory
 

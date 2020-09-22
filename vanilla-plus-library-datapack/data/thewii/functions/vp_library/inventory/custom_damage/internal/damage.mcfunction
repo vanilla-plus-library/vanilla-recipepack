@@ -44,11 +44,11 @@ execute store result storage thewii:vp_library/temp damageTool.tag.Damage int 1 
 scoreboard players operation #tool.lore_damage twvp.temp = #tool.durability twvp.temp
 scoreboard players operation #tool.lore_damage twvp.temp -= #tool.damage twvp.temp
 
-data remove block 29999983 0 4321 Text1
-data modify block 29999983 0 4321 Text1 set value '[{"text":"Uses: ","color":"gray","italic":false},{"score":{"name":"#tool.lore_damage","objective":"twvp.temp"}},{"text":"/"},{"score":{"name":"#tool.durability","objective":"twvp.temp"}}]'
+data remove block 29999999 0 4321 Text1
+data modify block 29999999 0 4321 Text1 set value '[{"text":"Uses: ","color":"gray","italic":false},{"score":{"name":"#tool.lore_damage","objective":"twvp.temp"}},{"text":"/"},{"score":{"name":"#tool.durability","objective":"twvp.temp"}}]'
 
 execute unless data storage thewii:vp_library/temp damageTool.tag.display.Lore run data modify storage thewii:vp_library/temp damageTool.tag.display.Lore append value '{"text":"Uses"}'
-data modify storage thewii:vp_library/temp damageTool.tag.display.Lore[-1] set from block 29999983 0 4321 Text1
+data modify storage thewii:vp_library/temp damageTool.tag.display.Lore[-1] set from block 29999999 0 4321 Text1
 
 
 # Break tool

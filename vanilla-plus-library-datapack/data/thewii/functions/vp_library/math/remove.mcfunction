@@ -8,4 +8,4 @@ execute store result score #dependencies twvp.temp run scoreboard players get #d
 execute if score #dependencies twvp.temp matches ..0 run function thewii:vp_library/math/uninstall
 execute if score #dependencies twvp.temp matches ..0 run data remove storage thewii:vp_library/data modules.math
 
-execute unless data storage thewii:vp_library/data modules run function thewii:vp_library/core/uninstall
+function thewii:vp_library/core/check_uninstall

@@ -1,1 +1,0 @@
-bossbar remove thewii:vp_library/generation/bossbar

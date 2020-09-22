@@ -1,2 +1,0 @@
-execute unless block ~ ~-63 ~ #thewii:vp_library/generation/descend_through run function thewii:vp_library/generation/struct_gen/surface/descend_16
-execute positioned ~ ~-63 ~ if block ~ ~ ~ #thewii:vp_library/generation/descend_through run function thewii:vp_library/generation/struct_gen/surface/descend_63

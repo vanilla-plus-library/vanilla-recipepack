@@ -1,4 +1,4 @@
-execute unless data storage thewii:vp_library/data modules run function thewii:vp_library/core/install
+#> thewii:vp_library/math/install
 
 # Math module objective
 scoreboard objectives add twvp.math dummy
