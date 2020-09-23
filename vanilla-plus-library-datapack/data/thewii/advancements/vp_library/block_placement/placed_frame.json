@@ -1,0 +1,21 @@
+{
+    "criteria": {
+        "placedframe": {
+            "trigger": "minecraft:item_used_on_block",
+            "conditions": {
+                "item": {
+                    "item": "minecraft:item_frame",
+                    "nbt": "{EntityTag:{Tags:[\"twvp.place_block\"]}}"
+                }
+            }
+        }
+    },
+    "requirements": [
+        [
+            "placedframe"
+        ]
+    ],
+    "rewards": {
+        "function": "thewii:vp_library/block_placement/placed_frame/check_start"
+    }
+}
