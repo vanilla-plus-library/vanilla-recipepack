@@ -13,6 +13,6 @@
         ]
     ],
     "rewards": {
-        "function": "thewii:vp_library/block_placement/start"
+        "function": "thewii:vp_library/block_placement/placed_furnace/check_start"
     }
 }

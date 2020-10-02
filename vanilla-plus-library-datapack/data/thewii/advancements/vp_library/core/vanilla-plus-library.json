@@ -1,0 +1,18 @@
+{
+    "display": {
+        "title": [{"text":"[v1.0.0] ","color":"#109C00"},{"text":"Vanilla+ Library","color":"#32D113"}] ,
+        "description": [{"text":"TheWii's Datapacking Library.","color":"#90E864"}],
+        "icon": {
+            "item": "minecraft:player_head",
+            "nbt": "{SkullOwner: 'Kevos'}"
+        },
+        "announce_to_chat": false,
+        "show_toast": false
+    },
+    "parent": "global:the-wii",
+    "criteria": {
+        "trigger": {
+            "trigger": "minecraft:tick"
+        }
+    }
+}

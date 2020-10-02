@@ -8,14 +8,8 @@
 # Reset temporary objective
 scoreboard players reset * twvp.temp
 
-# Lantern Load
-scoreboard players set #vplib.core thewii.load 010000
+# Datapack version
+scoreboard players set $vplib.core thewii.load 010000
 
-# Set player ids
-execute as @a store result score @s twvp.id run data get entity @s UUID[0]
-
-# Update
-execute if data storage thewii:vp_library/data version unless data storage thewii:vp_library/data {version:"1.0 alpha"} run function thewii:vp_library/core/update
-
-# Version
-data modify storage thewii:vp_library/data version set value "1.0 alpha"
+# Set player uuids and ids
+execute as @a run function thewii:vp_library/core/player_joined

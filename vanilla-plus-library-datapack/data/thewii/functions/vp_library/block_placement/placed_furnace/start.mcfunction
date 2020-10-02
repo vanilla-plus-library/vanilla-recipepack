@@ -1,3 +1,5 @@
+#> thewii:vp_library/block_placement/placed_furnace/start
+
 # Revoke trigger
 advancement revoke @s only thewii:vp_library/block_placement/placed_furnace
 

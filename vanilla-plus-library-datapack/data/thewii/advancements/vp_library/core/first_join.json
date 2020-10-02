@@ -1,0 +1,10 @@
+{
+    "criteria": {
+        "entered": {
+            "trigger": "minecraft:tick"
+        }
+    },
+    "rewards": {
+        "function": "thewii:vp_library/core/player_joined"
+    }
+}
