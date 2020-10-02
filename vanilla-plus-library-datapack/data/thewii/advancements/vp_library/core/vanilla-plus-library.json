@@ -9,7 +9,7 @@
         "announce_to_chat": false,
         "show_toast": false
     },
-    "parent": "global:the-wii",
+    "parent": "global:thewii",
     "criteria": {
         "trigger": {
             "trigger": "minecraft:tick"
