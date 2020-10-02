@@ -10,6 +10,3 @@ scoreboard players reset * twvp.temp
 
 # Datapack version
 scoreboard players set $vplib.core thewii.load 010000
-
-# Set player uuids and ids
-execute as @a run function thewii:vp_library/core/player_joined
