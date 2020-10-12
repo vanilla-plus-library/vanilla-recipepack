@@ -1,0 +1,64 @@
+{"values":[
+    "minecraft:redstone_wire",
+
+    "minecraft:beetroots",
+    "minecraft:nether_wart",
+    "minecraft:kelp",
+
+    "minecraft:lever",
+    "minecraft:tripwire_hook",
+    "minecraft:tripwire",
+
+    "minecraft:lily_pad",
+    "minecraft:wheat",
+    "minecraft:sugar_cane",
+    "minecraft:sweet_berry_bush",
+
+    "#minecraft:wall_signs",
+    "#minecraft:buttons",
+    "#minecraft:rails",
+
+    "#thewii:vp_library/raycasting/standing_sign_like",
+    "#thewii:vp_library/raycasting/attached_melon_stem_like",
+    "#thewii:vp_library/raycasting/melon_stem_like",
+    "#thewii:vp_library/raycasting/wall_torch_like",
+    "#thewii:vp_library/raycasting/torch_like",
+    "#thewii:vp_library/raycasting/wall_coral_like",
+    "#thewii:vp_library/raycasting/coral_plant_like",
+    "#thewii:vp_library/raycasting/coral_fan_like",
+    "#thewii:vp_library/raycasting/grass_like",
+    "#thewii:vp_library/raycasting/sapling_like",
+    "#thewii:vp_library/raycasting/wall_banner_like",
+    "#thewii:vp_library/raycasting/carrots_like",
+    "#thewii:vp_library/raycasting/pressure_plate_like",
+    "#thewii:vp_library/raycasting/vine_like",
+    "#thewii:vp_library/raycasting/fungus",
+    "#thewii:vp_library/raycasting/roots",
+
+	"minecraft:red_mushroom",
+    "minecraft:brown_mushroom",
+    "#minecraft:small_flowers",
+    "minecraft:bamboo_sapling",
+
+    "minecraft:twisting_vines",
+    "minecraft:twisting_vines_plant",
+    "minecraft:weeping_vines",
+    "minecraft:weeping_vines_plant",
+    "minecraft:nether_sprouts",
+    "minecraft:soul_fire",
+
+    "minecraft:tall_grass",
+	"minecraft:tall_seagrass",
+    "minecraft:large_fern",
+    "minecraft:sunflower",
+    "minecraft:lilac",
+    "minecraft:peony",
+    "minecraft:rose_bush",
+    "minecraft:bubble_column",
+    "minecraft:end_gateway",
+    "minecraft:kelp_plant",
+    "minecraft:lava",
+    "minecraft:water",
+    "minecraft:nether_portal"
+
+]}

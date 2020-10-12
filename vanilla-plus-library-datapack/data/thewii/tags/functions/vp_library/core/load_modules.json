@@ -4,6 +4,7 @@
         "thewii:vp_library/click_detections/load",
         "thewii:vp_library/math/load",
         "thewii:vp_library/block_placement/load",
-        "thewii:vp_library/inventory/load"
+        "thewii:vp_library/inventory/load",
+        "thewii:vp_library/raycasting/load"
     ]
 }
