@@ -1,20 +1,15 @@
 #> thewii:vp_library/custom_crafting/block/gui/main
 
 # Move container to storage
-data remove storage thewii:vp_library/temp container
 data modify storage thewii:vp_library/temp container set from block ~ ~ ~ Items
 
 
 # Check holders
-scoreboard players set #slot_holders twvp.temp 0
 execute store result score #slot_holders twvp.temp if data storage thewii:vp_library/temp container[{Count:1b,tag:{vplib:{slot_holder:1b,type:1b}}}]
-
-#tellraw @a ["Slot holders: ",{"score":{"name":"#slot_holders","objective":"twvp.temp"}}]
 execute unless score #slot_holders twvp.temp matches 17 run function thewii:vp_library/custom_crafting/block/gui/holders
-
+#tellraw @a ["Slot holders: ",{"score":{"name":"#slot_holders","objective":"twvp.temp"}}]
 
 # Get craft grid slots
-data remove storage thewii:vp_library/temp recipeInput
 data modify storage thewii:vp_library/temp recipeInput set from storage thewii:vp_library/temp container
 data remove storage thewii:vp_library/temp recipeInput[{Slot:16b}]
 data remove storage thewii:vp_library/temp recipeInput[{tag:{vplib:{slot_holder:1b}}}]

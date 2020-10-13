@@ -18,18 +18,18 @@ execute if score #amount twvp.temp matches 8 run function #thewii:vp_library/cus
 execute if score #amount twvp.temp matches 9 run function #thewii:vp_library/custom_crafting/recipes/9_slots
 
 
-# Result slot
-scoreboard players set #show_result twvp.temp 0
-
-## Check withdrawn result slot
+# Check withdrawn result slot
 execute if score #recipe twvp.temp matches 1.. if score @s twvp.recipe matches 1.. if score @s twvp.recipe = #recipe twvp.temp if data storage thewii:vp_library/temp containerResult run function thewii:vp_library/custom_crafting/block/gui/result_compare
 
 execute if score #recipe twvp.temp matches 1.. unless data storage thewii:vp_library/temp containerResult run function thewii:vp_library/custom_crafting/block/gui/crafted
 
 
-## Show result
+# Show result
+scoreboard players set #show_result twvp.temp 0
+
 execute if score #recipe twvp.temp matches 1.. unless score @s twvp.recipe matches 1.. run scoreboard players set #show_result twvp.temp 1
 execute if score #recipe twvp.temp matches 1.. unless score @s twvp.recipe = #recipe twvp.temp run scoreboard players set #show_result twvp.temp 1
+
 execute if score #show_result twvp.temp matches 1 run function thewii:vp_library/custom_crafting/block/gui/show_result
 
 
