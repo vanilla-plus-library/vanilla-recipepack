@@ -1,0 +1,2 @@
+execute positioned ~ ~0.5 ~ run summon armor_stand ~ ~ ~ {Tags:["twta.block","twta.block_tick_2","twta.wrench_affected","twta.arcane_workbench"],ArmorItems:[{},{},{},{id:"minecraft:stick",Count:1b,tag:{CustomModelData:430000}}],Small:1,NoGravity:1,Marker:1,Invisible:1}
+setblock ~ ~ ~ barrel[facing=up]{CustomName:'[{"translate":"space.-8"},{"text":"\\ue000","font":"thewii:alchemist/custom_gui","color":"white"},{"translate":"space.-164"},{"text":"Arcane Workbench"}]'}

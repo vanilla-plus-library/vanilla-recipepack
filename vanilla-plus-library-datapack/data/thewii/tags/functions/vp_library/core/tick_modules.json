@@ -1,5 +1,6 @@
 {
     "values": [
-        "thewii:vp_library/click_detections/tick_0"
+        "thewii:vp_library/click_detections/tick_0",
+        "thewii:vp_library/custom_crafting/internal/tick_0"
     ]
 }

@@ -5,6 +5,7 @@
         "thewii:vp_library/math/load",
         "thewii:vp_library/block_placement/load",
         "thewii:vp_library/inventory/load",
-        "thewii:vp_library/raycasting/load"
+        "thewii:vp_library/raycasting/load",
+        "thewii:vp_library/custom_crafting/internal/load"
     ]
 }

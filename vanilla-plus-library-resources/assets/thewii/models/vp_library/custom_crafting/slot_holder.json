@@ -1,0 +1,6 @@
+{
+	"parent": "item/generated",
+	"textures": {
+		"layer0": "thewii:vp_library/custom_crafting/slot_holder"
+	}
+}
