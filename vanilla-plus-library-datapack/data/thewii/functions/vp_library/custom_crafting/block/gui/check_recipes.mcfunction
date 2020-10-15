@@ -7,7 +7,7 @@ execute store result score #amount twvp.temp if data storage thewii:vp_library/t
 data modify storage thewii:vp_library/temp recipeOutput set value {}
 
 # Check recipes based on item amount(performance boost)
-execute if score #amount twvp.temp matches 1 run function #thewii:vp_library/custom_crafting/recipes/1_slot
+execute if score #amount twvp.temp matches 1 run function #thewii:vp_library/custom_crafting/recipes/1_slots
 execute if score #amount twvp.temp matches 2 run function #thewii:vp_library/custom_crafting/recipes/2_slots
 execute if score #amount twvp.temp matches 3 run function #thewii:vp_library/custom_crafting/recipes/3_slots
 execute if score #amount twvp.temp matches 4 run function #thewii:vp_library/custom_crafting/recipes/4_slots
