@@ -5,6 +5,6 @@
     },
 
 	"overrides": [
-        {"predicate": {"custom_model_data":430000}, "model": "thewii:vp_library/custom_crafting/slot_holder"}
+        {"predicate": {"custom_model_data":430000}, "model": "vplib:custom_crafting/v1/slot_holder"}
 	]
 }

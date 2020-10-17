@@ -1,0 +1,13 @@
+{
+    "providers": [
+        {
+            "type": "bitmap",
+            "file": "vplib:custom_crafting/v1/gui.png",
+            "ascent": 13,
+            "height": 256,
+            "chars": [
+                "\ue000"
+            ]
+        }
+    ]
+}
