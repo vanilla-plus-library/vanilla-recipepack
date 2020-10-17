@@ -12,17 +12,11 @@ scoreboard objectives add vpcc.lastRecipe dummy
 tellraw @a[tag=vplib.debug] [{"text":"[Debug]: ","color":"yellow","bold":true},{"text":"Loaded: Vanilla+ Lib Custom Crafting v1","color":"white","bold":false}]
 
 # Update recipe registry
-data remove storage vplib:temp recipeInput
-scoreboard players set #recipe vpcr.temp -1
-
 scoreboard players reset * vpcc.recipe
 scoreboard players set $register vpcc.recipe 0
 
-function #vplib:custom_crafting/api/recipes/all
-
-## DEBUG Message
-tellraw @a[tag=vplib.debug] [{"text":"[Debug]: ","color":"yellow","bold":true},{"score":{"name":"$register","objective": "vpcc.recipe"},"color":"white","bold":false},{"text":" recipes loaded.","color":"white","bold":false}]
-
+scoreboard players set #recipes.load vpcr.data 0
+schedule function vplib:custom_crafting/v1/load/recipes 5t replace 
 
 # VERSION Set storage
 
