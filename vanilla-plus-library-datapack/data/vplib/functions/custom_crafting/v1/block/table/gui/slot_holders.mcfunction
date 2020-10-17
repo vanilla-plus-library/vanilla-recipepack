@@ -48,3 +48,6 @@ execute if data storage vplib:temp array[0] at @p run function vplib:custom_craf
 # Kill and clear slot holder items
 kill @e[type=item,nbt={Item:{tag:{vplib:{slot_holder:1b}}}}]
 clear @a[distance=..8] minecraft:gray_stained_glass_pane{vplib:{slot_holder:1b}}
+
+# Update container
+data modify storage vplib:temp container set from block ~ ~ ~ Items

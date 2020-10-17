@@ -3,7 +3,7 @@
 
 # Get result
 data remove storage vplib:temp array
-execute unless score @s vpcc.recipe matches 1.. run data modify storage vplib:temp array append from storage vplib:temp containerResult
+execute unless score @s vpcc.lastRecipe matches 1.. run data modify storage vplib:temp array append from storage vplib:temp containerResult
 
 # Summon inserted item at nearest player
 execute if data storage vplib:temp array[0] at @p run function vplib:custom_crafting/v1/block/table/gui/drop/summon_loop

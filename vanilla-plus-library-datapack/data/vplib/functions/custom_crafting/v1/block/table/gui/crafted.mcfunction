@@ -1,5 +1,5 @@
 #> vplib:custom_crafting/v1/block/table/gui/crafted
-#tellraw @a "Crafted."
+#say Crafted.
 
 # Set slot holder
 replaceitem block ~ ~ ~ container.16 minecraft:gray_stained_glass_pane{HideFlags:63,CustomModelData:430000,vplib:{slot_holder:1b,type:2b},display:{Name:'{"text":""}'}}
@@ -16,4 +16,7 @@ execute if data storage vplib:temp recipeInput[{Slot:21b}] store result block ~ 
 execute if data storage vplib:temp recipeInput[{Slot:22b}] store result block ~ ~ ~ Items[{Slot:22b}].Count byte 1 run data get storage vplib:temp recipeInput[{Slot:22b}].Count 0.9999999999
 
 # Reset recipe
-scoreboard players set #recipe vpcr.temp 0
+scoreboard players set @s vpcc.recipe 0
+
+# Require an update
+scoreboard players set #update_data vpcr.temp 1

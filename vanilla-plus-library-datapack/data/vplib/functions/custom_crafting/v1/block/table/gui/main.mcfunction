@@ -19,12 +19,25 @@ data modify storage vplib:temp containerResult set from storage vplib:temp conta
 data remove storage vplib:temp containerResult.Slot
 
 
-# Check recipes if there is at least one item in the grid
-scoreboard players set #recipe vpcr.temp 0
-execute if data storage vplib:temp recipeInput[0] run function vplib:custom_crafting/v1/block/table/gui/check_recipes
+# Check grid
+scoreboard players set #update_data vpcr.temp 0
 
-# Check if result slot holder was removed(only if there are no active recipes)
-execute if score #recipe vpcr.temp matches 0 unless data storage vplib:temp containerResult{Count:1b,tag:{vplib:{slot_holder:1b,type:2b}}} run function vplib:custom_crafting/v1/block/table/gui/drop/result_slot
+## Get stored data
+data modify storage vplib:temp storedData set from entity @s ArmorItems[3].tag.vplib
 
-# Save recipe
-execute unless score @s vpcc.recipe = #recipe vpcr.temp run function vplib:custom_crafting/v1/block/table/gui/save_changes
+## Check grid update
+data modify storage vplib:temp compare set from storage vplib:temp storedData.recipeInput
+execute store success score #update_grid vpcr.temp run data modify storage vplib:temp compare set from storage vplib:temp recipeInput
+
+execute if score #update_grid vpcr.temp matches 1 run function vplib:custom_crafting/v1/block/table/gui/grid/update
+
+
+## Result slot management
+execute if data storage vplib:temp storedData.recipeInput[0] run function vplib:custom_crafting/v1/block/table/gui/result/check
+
+## Check if result slot holder was removed(only if there are no active recipes)
+execute if score @s vpcc.recipe matches 0 unless data storage vplib:temp containerResult{Count:1b,tag:{vplib:{slot_holder:1b,type:2b}}} run function vplib:custom_crafting/v1/block/table/gui/drop/result_slot
+
+
+# Update
+execute if score #update_data vpcr.temp matches 1 run function vplib:custom_crafting/v1/block/table/gui/update_data
