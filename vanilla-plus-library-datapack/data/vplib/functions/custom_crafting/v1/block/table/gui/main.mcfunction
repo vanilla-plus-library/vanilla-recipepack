@@ -37,7 +37,7 @@ execute if score @s vpcc.saved matches 1.. unless data storage vplib:temp contai
 function vplib:custom_crafting/v1/block/table/general/get_grid
 
 # Check if grid slots changed between the last update, if so ask for a grid update.
-data modify storage vplib:temp compare set from storage vplib:temp storedData.recipeInput
+execute if score #update_grid vpcr.temp matches 0 run data modify storage vplib:temp compare set from storage vplib:temp storedData.recipeInput
 execute if score #update_grid vpcr.temp matches 0 store success score #update_grid vpcr.temp run data modify storage vplib:temp compare set from storage vplib:temp recipeInput
 
 # Update grid(Checking recipes).
@@ -48,8 +48,8 @@ execute if score #update_grid vpcr.temp matches 1 run function vplib:custom_craf
 execute if score #show_result vpcr.temp matches 1 run function vplib:custom_crafting/v1/block/table/gui/result/show_output
 
 # Check if result slot holder is on place
-execute if score @s vpcc.saved matches 0 if score #show_result vpcr.temp matches 0 unless data storage vplib:temp containerResult{Count:1b,tag:{vplib:{slot_holder:1b,type:2b}}} run function vplib:custom_crafting/v1/block/table/gui/drop/result_slot
+execute if score #show_result vpcr.temp matches 0 if score @s vpcc.saved matches 0 unless data storage vplib:temp containerResult{Count:1b,tag:{vplib:{slot_holder:1b,type:2b}}} run function vplib:custom_crafting/v1/block/table/gui/drop/result_slot
 
 
 # Store data
-execute if score #store_data vpcr.temp matches 1 run function vplib:custom_crafting/v1/block/table/gui/update_data
+execute if score #store_data vpcr.temp matches 1 run data modify entity @s ArmorItems[3].tag.vplib set from storage vplib:temp storedData

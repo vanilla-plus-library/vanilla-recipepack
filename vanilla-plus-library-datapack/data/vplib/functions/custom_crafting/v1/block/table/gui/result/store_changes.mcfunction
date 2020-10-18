@@ -1,4 +1,6 @@
 #> vplib:custom_crafting/v1/block/table/gui/result/store_changes
+# DEBUG
+#say Recipe output changed.
 
 # Save result
 data remove storage vplib:temp recipeOutput.Slot

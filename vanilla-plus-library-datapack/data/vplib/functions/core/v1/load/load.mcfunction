@@ -17,4 +17,4 @@ data modify storage vplib:data modules.core.version.current set value 1
 data modify storage vplib:data modules.core.version.breaking set value 1
 
 # DEBUG Message
-tellraw @a[tag=vplib.debug] [{"text":"[Debug]: ","color":"yellow","bold":true},{"text":"Loaded: Vanilla+ Lib Core v1","color":"white","bold":false}]
+tellraw @a[tag=vplib.debug] [{"text":"[Debug]: ","color":"yellow","bold":true},{"text":"Loaded Vanilla+ Library: Core v1","color":"white","bold":false}]
