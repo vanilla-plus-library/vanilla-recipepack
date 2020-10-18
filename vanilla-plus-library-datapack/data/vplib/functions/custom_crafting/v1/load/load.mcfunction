@@ -6,7 +6,7 @@
 
 # Setup
 scoreboard objectives add vpcc.recipe dummy
-scoreboard objectives add vpcc.lastRecipe dummy
+scoreboard objectives add vpcc.saved dummy
 
 # DEBUG Message
 tellraw @a[tag=vplib.debug] [{"text":"[Debug]: ","color":"yellow","bold":true},{"text":"Loaded: Vanilla+ Lib Custom Crafting v1","color":"white","bold":false}]

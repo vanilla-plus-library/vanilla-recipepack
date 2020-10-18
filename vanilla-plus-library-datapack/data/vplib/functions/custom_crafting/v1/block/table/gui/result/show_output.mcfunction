@@ -1,13 +1,14 @@
 #> vplib:custom_crafting/v1/block/table/gui/result/show_output
-# DEBUG Show output
-#say Showing result.
 
-# Set default if container's result was empty
-execute unless data storage vplib:temp containerResult run replaceitem block ~ ~ ~ container.16 minecraft:stone 1
+# Set result slot holder
+replaceitem block ~ ~ ~ container.16 minecraft:gray_stained_glass_pane{HideFlags:63,CustomModelData:430000,vplib:{slot_holder:1b,type:2b},display:{Name:'{"text":""}'}}
 
 # Get item
 data modify storage vplib:temp item set from storage vplib:temp storedData.recipeOutput
 data modify storage vplib:temp item.Slot set value 16b
 
 # Set recipe output
-data modify block ~ ~ ~ Items[{Slot:16b}] set from storage vplib:temp item
+execute if data storage vplib:temp item.id run data modify block ~ ~ ~ Items[{Slot:16b}] set from storage vplib:temp item
+
+# DEBUG Show output
+#tellraw @a ["Showing result: ",{"nbt":"item","storage":"vplib:temp"}]

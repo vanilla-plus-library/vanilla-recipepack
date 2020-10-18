@@ -1,5 +1,5 @@
 #> vplib:custom_crafting/v1/block/table/gui/grid/update
-#say Grid was updated.
+#say DEBUG Grid was updated.
 #tellraw @a ["Container:",{"nbt":"recipeInput","storage":"vplib:temp"}]
 #tellraw @a ["Last check:",{"nbt":"storedData.recipeInput","storage":"vplib:temp"}]
 
@@ -15,13 +15,14 @@ execute if data storage vplib:temp recipeInput[0] run function vplib:custom_craf
 #tellraw @a ["Output:",{"nbt":"storedData.recipeOutput","storage":"vplib:temp"}]
 
 # Save recipe output
-execute unless score #recipe vpcr.temp = @s vpcc.recipe run function vplib:custom_crafting/v1/block/table/gui/result/store_changes
+execute unless score #recipe vpcr.temp = @s vpcc.saved run function vplib:custom_crafting/v1/block/table/gui/result/store_changes
 
 # Save grid
 data modify storage vplib:temp storedData.recipeInput set from storage vplib:temp recipeInput
 
-# Require an update
-scoreboard players set #update_data vpcr.temp 1
+
+# Force store data
+scoreboard players set #store_data vpcr.temp 1
 
 
 

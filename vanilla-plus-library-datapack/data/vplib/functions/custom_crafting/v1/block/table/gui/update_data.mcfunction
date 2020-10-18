@@ -3,6 +3,3 @@
 
 # Update stored data
 data modify entity @s ArmorItems[3].tag.vplib set from storage vplib:temp storedData
-
-# Update last recipe score
-scoreboard players operation @s vpcc.lastRecipe = @s vpcc.recipe

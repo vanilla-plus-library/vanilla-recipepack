@@ -1,5 +1,5 @@
 #> vplib:custom_crafting/v1/block/table/gui/slot_holders
-tellraw @p {"score":{"name":"#slot_holders","objective":"vpcr.temp"}}
+# DEBUG tellraw @p {"score":{"name":"#slot_holders","objective":"vpcr.temp"}}
 
 # Get container
 data modify storage vplib:temp array set from storage vplib:temp container
