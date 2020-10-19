@@ -1,4 +1,6 @@
-#> vplib:custom_crafting/v1/block/table/kill_matched_item
+#> vplib:custom_crafting/v1/block/table/general/kill_matching_item
+# Description: Kill items that matches a given nbt.
+# Input: 'vplib:temp item' / As item
 
 # Get item data
 data modify storage vplib:temp compare set from entity @s Item

@@ -1,6 +1,7 @@
 #> vplib:custom_crafting/v1/block/table/general/get_grid
-# Input:  vplib:temp container(inv array)
-# Output: vplib:temp recipeInput
+# Description: Get grid from container.
+# Input:  'vplib:temp container'
+# Output: 'vplib:temp recipeInput'
 
 # Get grid slots.
 data modify storage vplib:temp recipeInput set from storage vplib:temp container

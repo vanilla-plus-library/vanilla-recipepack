@@ -7,6 +7,9 @@ scoreboard players set #show_result vpcr.temp 0
 scoreboard players set #crafted vpcr.temp 0
 scoreboard players set #clear_result vpcr.temp 0
 
+# Get stored data(previous grid and result).
+data modify storage vplib:temp storedData set from entity @s ArmorItems[3].tag.vplib
+
 # Move container to storage.
 data modify storage vplib:temp container set from block ~ ~ ~ Items
 
@@ -17,12 +20,7 @@ execute unless score #slot_holders vpcr.temp matches 17 run function vplib:custo
 
 
 # Get result slot.
-data remove storage vplib:temp containerResult
-data modify storage vplib:temp containerResult set from storage vplib:temp container[{Slot:16b}]
-data remove storage vplib:temp containerResult.Slot
-
-# Get stored data(previous grid and result).
-data modify storage vplib:temp storedData set from entity @s ArmorItems[3].tag.vplib
+function vplib:custom_crafting/v1/block/table/general/get_result
 
 
 # If a recipe is active, check if current result doesn't match the expected result slot(unless the recipe changed)(forcing the command below to run).

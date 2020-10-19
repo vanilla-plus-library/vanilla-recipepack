@@ -21,9 +21,6 @@ data modify storage vplib:temp container set from block ~ ~ ~ Items
 # Set crafted status
 scoreboard players set #crafted vpcr.temp 1
 
-# Reset recipe
-#scoreboard players set @s vpcc.saved 0
-
 # Force a grid update
 scoreboard players set #update_grid vpcr.temp 1
 
