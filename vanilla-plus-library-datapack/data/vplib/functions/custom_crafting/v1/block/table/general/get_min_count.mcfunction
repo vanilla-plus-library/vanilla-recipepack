@@ -5,7 +5,6 @@
 
 # Get current count
 execute store result score #current vpcr.temp run data get storage vplib:temp array[-1].Count
-#tellraw @a ["Current: ",{"score":{"name":"#current","objective": "vpcr.temp"}}]
 
 # Set higher score
 scoreboard players operation #minimum vpcr.temp < #current vpcr.temp

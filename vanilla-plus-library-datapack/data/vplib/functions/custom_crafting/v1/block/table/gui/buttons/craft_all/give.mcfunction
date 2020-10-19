@@ -4,7 +4,10 @@
 scoreboard players set #found_player vpcr.temp 1
 
 # Give items
-loot give @s mine ~ 255 ~ minecraft:air{drop_contents:1b}
+scoreboard players set #set_owner vpcr.temp 1
+data modify storage vplib:temp uuid set from entity @s UUID
+
+execute at @s positioned ~ ~1 ~ run function vplib:custom_crafting/v1/block/table/general/summon_items
 
 # Sound
 execute at @s run playsound minecraft:ui.button.click master @s ~ ~ ~ 0.25 1

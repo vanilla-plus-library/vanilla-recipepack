@@ -1,4 +1,4 @@
-#> vplib:custom_crafting/v1/block/table/gui/button/craft_all/subtract_grid
+#> vplib:custom_crafting/v1/block/table/gui/buttons/craft_all/subtract_grid
 
 # Get grid count
 execute store result score #grid0 vpcr.temp run data get storage vplib:temp recipeInput[{Slot:2b}].Count

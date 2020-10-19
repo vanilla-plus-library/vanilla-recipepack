@@ -6,12 +6,9 @@ data modify storage vplib:temp item set from storage vplib:temp storedData.recip
 # Store data
 scoreboard players operation #count vpcr.temp = #output vpcr.temp
 execute store result storage vplib:temp item.Count byte 1 run scoreboard players operation #count vpcr.temp < #127 vpcr.temp
-execute store result storage vplib:temp item.Slot byte 1 run scoreboard players add #slot vpcr.temp 1
 
 # Append
-data modify block ~ 255 ~ Items append from storage vplib:temp item
-tellraw @a [{"nbt":"item","storage": "vplib:temp"}]
-
+data modify storage vplib:temp array append from storage vplib:temp item
 
 # Loop
 scoreboard players operation #output vpcr.temp -= #count vpcr.temp

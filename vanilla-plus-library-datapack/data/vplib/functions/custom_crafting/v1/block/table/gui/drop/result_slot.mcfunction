@@ -6,7 +6,8 @@ data remove storage vplib:temp array
 data modify storage vplib:temp array append from storage vplib:temp containerResult
 
 # Summon inserted item at nearest player
-execute if data storage vplib:temp array[0] at @p run function vplib:custom_crafting/v1/block/table/general/summon_items
+scoreboard players set #set_owner vpcr.temp 0
+execute if data storage vplib:temp array[0] at @p positioned ~ ~1 ~ run function vplib:custom_crafting/v1/block/table/general/summon_items
 
 # Kill and clear slot holder items
 kill @e[type=item,nbt={Item:{tag:{vplib:{slot_holder:1b,type:2b}}}}]
