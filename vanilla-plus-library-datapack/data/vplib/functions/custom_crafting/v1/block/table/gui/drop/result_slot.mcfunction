@@ -10,8 +10,8 @@ scoreboard players set #set_owner vpcr.temp 0
 execute if data storage vplib:temp array[0] at @p positioned ~ ~1 ~ run function vplib:custom_crafting/v1/block/table/general/summon_items
 
 # Kill and clear slot holder items
-kill @e[type=item,nbt={Item:{tag:{vplib:{slot_holder:1b,type:2b}}}}]
-clear @a[distance=..8] minecraft:gray_stained_glass_pane{vplib:{slot_holder:1b,type:2b}}
+kill @e[type=item,nbt={Item:{tag:{vplib:{slot_holder:1b}}}}]
+clear @a[distance=..8] minecraft:gray_stained_glass_pane{vplib:{slot_holder:1b}}
 
 
 # Set result slot holder

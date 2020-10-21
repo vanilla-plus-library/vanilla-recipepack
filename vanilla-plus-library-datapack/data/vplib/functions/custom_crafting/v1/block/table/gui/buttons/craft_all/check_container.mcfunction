@@ -12,11 +12,12 @@ function vplib:custom_crafting/v1/block/table/general/get_result
 
 # Check if grid changed
 data modify storage vplib:temp compare set from storage vplib:temp recipeInput
-execute store result score #grid_changed vpcr.temp run data modify storage vplib:temp compare set from storage vplib:temp storedData.recipeInput
+data remove storage vplib:temp compare[].Count
+execute store result score #grid_changed vpcr.temp run data modify storage vplib:temp compare set from storage vplib:temp savedData.recipeInput
 
 # Check if grid changed
 data modify storage vplib:temp compare set from storage vplib:temp containerResult
-execute store result score #result_changed vpcr.temp run data modify storage vplib:temp compare set from storage vplib:temp storedData.recipeOutput
+execute store result score #result_changed vpcr.temp run data modify storage vplib:temp compare set from storage vplib:temp savedData.recipeOutput
 
 
 # Proceed

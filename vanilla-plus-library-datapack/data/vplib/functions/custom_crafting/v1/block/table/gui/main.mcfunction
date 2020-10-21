@@ -2,13 +2,13 @@
 
 # Reset scores
 scoreboard players set #update_grid vpcr.temp 0
-scoreboard players set #update_data vpcr.temp 0
-scoreboard players set #show_result vpcr.temp 0
+scoreboard players set #save_data vpcr.temp 0
+scoreboard players set #update_result vpcr.temp 0
 scoreboard players set #crafted vpcr.temp 0
 scoreboard players set #clear_result vpcr.temp 0
 
-# Get stored data(previous grid and result).
-data modify storage vplib:temp storedData set from entity @s ArmorItems[3].tag.vplib
+# Get saved data(last grid and result).
+data modify storage vplib:temp savedData set from entity @s ArmorItems[3].tag.vplib
 
 # Move container to storage.
 data modify storage vplib:temp container set from block ~ ~ ~ Items
@@ -27,15 +27,16 @@ function vplib:custom_crafting/v1/block/table/general/get_result
 execute if score @s vpcc.saved matches 1.. unless entity @s[tag=vplib.recipe_changed] if data storage vplib:temp containerResult run function vplib:custom_crafting/v1/block/table/gui/result/compare
 tag @s remove vplib.recipe_changed
 
-# If a recipe is active, check if result slot is empty, if so complete the crafting.(force a grid update)
+# If a recipe is active, check if result slot is empty, if so consume ingredients.(force a grid update)
 execute if score @s vpcc.saved matches 1.. unless data storage vplib:temp containerResult run function vplib:custom_crafting/v1/block/table/gui/crafted
 
 
-# Get grid slots.
+# Get grid slots and remove item count.
 function vplib:custom_crafting/v1/block/table/general/get_grid
+data remove storage vplib:temp recipeInput[].Count
 
-# Check if grid slots changed between the last update, if so ask for a grid update.
-execute if score #update_grid vpcr.temp matches 0 run data modify storage vplib:temp compare set from storage vplib:temp storedData.recipeInput
+# Check if grid slots changed between the last update, if so updatr grid.
+execute if score #update_grid vpcr.temp matches 0 run data modify storage vplib:temp compare set from storage vplib:temp savedData.recipeInput
 execute if score #update_grid vpcr.temp matches 0 store success score #update_grid vpcr.temp run data modify storage vplib:temp compare set from storage vplib:temp recipeInput
 
 # Update grid(Checking recipes).
@@ -43,11 +44,11 @@ execute if score #update_grid vpcr.temp matches 1 run function vplib:custom_craf
 
 
 # Show result(from recipe output)
-execute if score #show_result vpcr.temp matches 1 run function vplib:custom_crafting/v1/block/table/gui/result/show_output
+execute if score #update_result vpcr.temp matches 1 run function vplib:custom_crafting/v1/block/table/gui/result/show_output
 
-# Check if result slot holder is on place
-execute if score #show_result vpcr.temp matches 0 if score @s vpcc.saved matches 0 unless data storage vplib:temp containerResult{Count:1b,tag:{vplib:{slot_holder:1b,type:2b}}} run function vplib:custom_crafting/v1/block/table/gui/drop/result_slot
+# Check if result slot holder changed
+execute if score #update_result vpcr.temp matches 0 if score @s vpcc.saved matches 0 unless data storage vplib:temp containerResult{Count:1b,tag:{vplib:{slot_holder:1b,type:2b}}} run function vplib:custom_crafting/v1/block/table/gui/drop/result_slot
 
 
-# Store data
-execute if score #store_data vpcr.temp matches 1 run data modify entity @s ArmorItems[3].tag.vplib set from storage vplib:temp storedData
+# Save data
+execute if score #save_data vpcr.temp matches 1 run data modify entity @s ArmorItems[3].tag.vplib set from storage vplib:temp savedData

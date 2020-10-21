@@ -1,7 +1,7 @@
 #> vplib:custom_crafting/v1/block/table/gui/buttons/craft_all/loop
 
 # Get output
-data modify storage vplib:temp item set from storage vplib:temp storedData.recipeOutput
+data modify storage vplib:temp item set from storage vplib:temp savedData.recipeOutput
 
 # Store data
 scoreboard players operation #count vpcr.temp = #output vpcr.temp

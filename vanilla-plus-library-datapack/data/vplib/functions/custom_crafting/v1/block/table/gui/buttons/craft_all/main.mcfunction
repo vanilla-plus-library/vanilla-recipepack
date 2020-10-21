@@ -8,7 +8,7 @@ function vplib:custom_crafting/v1/block/table/general/get_min_count
 
 
 # Multiply single recipe output by the number of craftings
-execute store result score #output vpcr.temp run data get storage vplib:temp storedData.recipeOutput.Count
+execute store result score #output vpcr.temp run data get storage vplib:temp savedData.recipeOutput.Count
 scoreboard players operation #output vpcr.temp *= #minimum vpcr.temp
 
 

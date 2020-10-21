@@ -29,4 +29,4 @@ scoreboard players set #crafted vpcr.temp 1
 scoreboard players set #update_grid vpcr.temp 1
 
 # Force to show result
-scoreboard players set #show_result vpcr.temp 1
+scoreboard players set #update_result vpcr.temp 1
