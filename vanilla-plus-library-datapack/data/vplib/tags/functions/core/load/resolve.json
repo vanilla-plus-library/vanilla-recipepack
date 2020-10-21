@@ -1,5 +1,6 @@
 {
     "values": [
-        "#vplib:custom_crafting/api/load/resolve"
+        "#vplib:custom_crafting/api/load/resolve",
+        "#vplib:math/api/load/resolve"
     ]
 }

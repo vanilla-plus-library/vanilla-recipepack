@@ -7,6 +7,7 @@
 # Setup
 scoreboard objectives add vpcr.data dummy
 scoreboard objectives add vpcr.temp dummy
+scoreboard objectives add vpcr.math dummy
 
 # VERSION Set storage
 

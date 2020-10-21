@@ -1,0 +1,36 @@
+#> vplib:math/v1/core/constants
+
+scoreboard players set #-1 vpcr.math -1
+scoreboard players set #1 vpcr.math 1
+scoreboard players set #2 vpcr.math 2
+scoreboard players set #3 vpcr.math 3
+scoreboard players set #4 vpcr.math 4
+scoreboard players set #5 vpcr.math 5
+scoreboard players set #6 vpcr.math 6
+scoreboard players set #7 vpcr.math 7
+scoreboard players set #8 vpcr.math 8
+scoreboard players set #9 vpcr.math 9
+scoreboard players set #10 vpcr.math 10
+scoreboard players set #16 vpcr.math 16
+scoreboard players set #20 vpcr.math 20
+scoreboard players set #30 vpcr.math 30
+scoreboard players set #32 vpcr.math 32
+scoreboard players set #40 vpcr.math 40
+scoreboard players set #50 vpcr.math 50
+scoreboard players set #60 vpcr.math 60
+scoreboard players set #64 vpcr.math 64
+scoreboard players set #70 vpcr.math 70
+scoreboard players set #80 vpcr.math 80
+scoreboard players set #90 vpcr.math 90
+scoreboard players set #100 vpcr.math 100
+scoreboard players set #128 vpcr.math 128
+scoreboard players set #256 vpcr.math 256
+scoreboard players set #512 vpcr.math 512
+scoreboard players set #1000 vpcr.math 1000
+scoreboard players set #1024 vpcr.math 1024
+scoreboard players set #10000 vpcr.math 10000
+scoreboard players set #100000 vpcr.math 100000
+scoreboard players set #1000000 vpcr.math 1000000
+scoreboard players set #10000000 vpcr.math 10000000
+scoreboard players set #100000000 vpcr.math 100000000
+scoreboard players set #1000000000 vpcr.math 1000000000

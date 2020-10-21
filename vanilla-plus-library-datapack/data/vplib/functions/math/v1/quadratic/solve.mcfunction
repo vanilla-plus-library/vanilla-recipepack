@@ -19,7 +19,7 @@ tellraw @s[tag=twvp.debug] ["x = -(",{"score":{"name":"#input_b","objective":"vp
 
 # Resolve signal operation in x = -(b) ..
 scoreboard players operation #minus_b vpcr.temp = #input_b vpcr.temp
-scoreboard players operation #minus_b vpcr.temp *= #-1 twvp.math
+scoreboard players operation #minus_b vpcr.temp *= #-1 vpcr.math
 
 tellraw @s[tag=twvp.debug] ["x = ",{"score":{"name":"#minus_b","objective":"vpcr.temp"}}," +- sqrt( (",{"score":{"name":"#input_b","objective":"vpcr.temp"}},")**2 -4 * ",{"score":{"name":"#input_a","objective":"vpcr.temp"}}," * ",{"score":{"name":"#input_c","objective":"vpcr.temp"}},") / 2 * ",{"score":{"name":"#input_a","objective":"vpcr.temp"}}]
 
@@ -45,9 +45,9 @@ tellraw @s[tag=twvp.debug] ["x = ",{"score":{"name":"#minus_b","objective":"vpcr
 scoreboard players set #scale_factor vpcr.temp 10
 
 scoreboard players operation #input vpcr.temp = #discriminant vpcr.temp
-scoreboard players operation #input vpcr.temp *= #10 twvp.math
+scoreboard players operation #input vpcr.temp *= #10 vpcr.math
 
-function #vplib:math/api/quadratic/solve
+function thewii:vp_library/math/sqrt/start
 
 scoreboard players operation #sqrt vpcr.temp = #output vpcr.temp
 
@@ -61,8 +61,8 @@ scoreboard players operation #divider vpcr.temp *= #input_a vpcr.temp
 tellraw @s[tag=twvp.debug] ["x = ",{"score":{"name":"#minus_b","objective":"vpcr.temp"}}," +- ",{"score":{"name":"#sqrt","objective":"vpcr.temp"}}," / ",{"score":{"name":"#divider","objective":"vpcr.temp"}}]
 
 # Scale factor
-scoreboard players operation #minus_b vpcr.temp *= #10 twvp.math
-scoreboard players operation #divider vpcr.temp *= #10 twvp.math
+scoreboard players operation #minus_b vpcr.temp *= #10 vpcr.math
+scoreboard players operation #divider vpcr.temp *= #10 vpcr.math
 
 tellraw @s[tag=twvp.debug] ["x = ",{"score":{"name":"#minus_b","objective":"vpcr.temp"}}," +- ",{"score":{"name":"#sqrt","objective":"vpcr.temp"}}," / ",{"score":{"name":"#divider","objective":"vpcr.temp"}}]
 

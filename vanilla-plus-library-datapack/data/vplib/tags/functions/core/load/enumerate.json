@@ -1,5 +1,6 @@
 {
     "values": [
-        "#vplib:custom_crafting/api/load/enumerate"
+        "#vplib:custom_crafting/api/load/enumerate",
+        "#vplib:math/api/load/enumerate"
     ]
 }
