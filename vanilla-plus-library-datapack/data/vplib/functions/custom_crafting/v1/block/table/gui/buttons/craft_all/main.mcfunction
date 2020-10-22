@@ -1,30 +1,31 @@
 #> vplib:custom_crafting/v1/block/table/gui/buttons/craft_all/main
 
-# Get minimum amount that can be crafted
-data modify storage vplib:temp array set from storage vplib:temp recipeInput
-scoreboard players set #minimum vpcr.temp 64
+# Get minimum amount that can be crafted(lowest item count in the grid)
+data modify storage vplib:temp array set from storage vplib:temp containerGrid
 
+scoreboard players set #minimum vpcr.temp 64
 function vplib:custom_crafting/v1/block/table/general/get_min_count
-scoreboard players operation #crafted vpcr.temp = #minimum vpcr.temp
+
 
 # Reset ignore list
 data remove storage vplib:temp ignoreSlot
 
 # Call crafted hook(allow datapacks to execute extra functionality in a crafting)
 scoreboard players operation #recipe vpcr.temp = @s vpcc.saved
+scoreboard players operation #crafted vpcr.temp = #minimum vpcr.temp
 scoreboard players set #button.craft_all vpcr.temp 1
 function #vplib:custom_crafting/api/table/crafted
 
-# Multiply single recipe output by the number of craftings
+
+# Get output amount(recipe output count * crafted amount)
 execute store result score #output vpcr.temp run data get storage vplib:temp savedData.recipeOutput.Count
 scoreboard players operation #output vpcr.temp *= #crafted vpcr.temp
 
-
 # Generate items
-scoreboard players set #127 vpcr.math 127
 data modify storage vplib:temp array set value []
 
-scoreboard players set #slot vpcr.temp 0
+scoreboard players set #127 vpcr.math 127
+scoreboard players set #slot vpcr.temp -1
 function vplib:custom_crafting/v1/block/table/gui/buttons/craft_all/loop
 
 

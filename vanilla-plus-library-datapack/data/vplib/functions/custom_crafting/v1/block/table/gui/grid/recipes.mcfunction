@@ -1,8 +1,11 @@
 #> vplib:custom_crafting/v1/block/table/gui/grid/recipes
 #say Checking recipes.
 
+# Move container input
+data modify storage vplib:temp recipeInput set from storage vplib:temp containerGrid
+
 # Get amount of items in the grid
-execute store result score #amount vpcr.temp if data storage vplib:temp recipeInput[]
+execute store result score #amount vpcr.temp if data storage vplib:temp containerGrid[]
 
 # Check recipes based on the amount of items(improves performance)
 execute if score #amount vpcr.temp matches 1 run function #vplib:custom_crafting/api/table/recipes/1

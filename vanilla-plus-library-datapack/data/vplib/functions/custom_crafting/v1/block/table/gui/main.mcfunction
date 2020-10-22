@@ -4,7 +4,6 @@
 scoreboard players set #update_grid vpcr.temp 0
 scoreboard players set #update_result vpcr.temp 0
 scoreboard players set #save_data vpcr.temp 0
-scoreboard players set #crafted vpcr.temp 0
 
 
 # Get saved data(last grid and result).
@@ -32,11 +31,11 @@ execute if score @s vpcc.saved matches 1.. unless data storage vplib:temp contai
 
 # Get grid slots and remove item count.
 function vplib:custom_crafting/v1/block/table/general/get_grid
-data remove storage vplib:temp recipeInput[].Count
+data remove storage vplib:temp containerGrid[].Count
 
 # Check if grid slots changed since the last update
-execute if score #update_grid vpcr.temp matches 0 run data modify storage vplib:temp compare set from storage vplib:temp savedData.recipeInput
-execute if score #update_grid vpcr.temp matches 0 store success score #update_grid vpcr.temp run data modify storage vplib:temp compare set from storage vplib:temp recipeInput
+execute if score #update_grid vpcr.temp matches 0 run data modify storage vplib:temp compare set from storage vplib:temp containerGrid
+execute if score #update_grid vpcr.temp matches 0 store success score #update_grid vpcr.temp run data modify storage vplib:temp compare set from storage vplib:temp savedData.recipeInput
 
 # Update grid(Checking recipes).
 execute if score #update_grid vpcr.temp matches 1 run function vplib:custom_crafting/v1/block/table/gui/grid/update

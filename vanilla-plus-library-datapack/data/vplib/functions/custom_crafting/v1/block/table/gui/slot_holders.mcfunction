@@ -5,7 +5,7 @@
 function vplib:custom_crafting/v1/block/table/gui/buttons/main
 
 
-# Get container
+# Move container to temp array
 data modify storage vplib:temp array set from storage vplib:temp container
 
 # Remove slot holders
