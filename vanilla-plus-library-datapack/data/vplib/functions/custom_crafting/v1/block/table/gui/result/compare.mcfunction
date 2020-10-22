@@ -1,6 +1,6 @@
 #> vplib:custom_crafting/v1/block/table/gui/result/compare
 #tellraw @a ["Comparing container slot:",{"nbt":"containerResult","storage": "vplib:temp"}]
-#tellraw @a ["Comparing recipe output:",{"nbt":"recipeOutput","storage": "vplib:temp"}]
+#tellraw @a ["Comparing recipe output:",{"nbt":"savedData.recipeOutput","storage": "vplib:temp"}]
 
 # Get slot in container
 data remove storage vplib:temp compare

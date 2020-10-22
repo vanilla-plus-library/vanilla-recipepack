@@ -11,7 +11,7 @@ execute store success score #clicked vpcr.temp run clear @s minecraft:gray_stain
 
 
 # Proceed if true
-execute if score #found_player vpcr.temp matches 0 if score #clicked vpcr.temp matches 1.. run function vplib:custom_crafting/v1/block/table/gui/buttons/craft_all/give
+execute if score #found_player vpcr.temp matches 0 if score #clicked vpcr.temp matches 1.. at @s run function vplib:custom_crafting/v1/block/table/gui/buttons/craft_all/give
 
 
 

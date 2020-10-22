@@ -15,7 +15,7 @@ execute if data storage vplib:temp recipeInput[0] run function vplib:custom_craf
 #tellraw @a ["Current Output:",{"nbt":"recipeOutput","storage":"vplib:temp"}]
 #tellraw @a ["Last id:",{"score":{"name":"@s","objective": "vpcc.saved"}},"  Current id:",{"score":{"name":"#recipe","objective": "vpcr.temp"}}]
 
-# Save recipe output if there are changes
+# Save recipe output if recipe id changed
 execute unless score #recipe vpcr.temp = @s vpcc.saved run function vplib:custom_crafting/v1/block/table/gui/result/save_changes
 
 # Save grid

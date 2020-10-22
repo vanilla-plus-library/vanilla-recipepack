@@ -1,4 +1,4 @@
-#> vplib:custom_crafting/v1/block/table/gui/drop/result_slot
+#> vplib:custom_crafting/v1/block/table/gui/result/drop_item
 #tellraw @a "Replacing result holder"
 
 # Get result
@@ -7,7 +7,7 @@ data modify storage vplib:temp array append from storage vplib:temp containerRes
 
 # Summon inserted item at nearest player
 scoreboard players set #set_owner vpcr.temp 0
-execute if data storage vplib:temp array[0] at @p positioned ~ ~1 ~ run function vplib:custom_crafting/v1/block/table/general/summon_items
+execute if data storage vplib:temp array[0] at @p positioned ~ ~0.5 ~ run function vplib:custom_crafting/v1/block/table/general/summon_items
 
 # Kill and clear slot holder items
 kill @e[type=item,nbt={Item:{tag:{vplib:{slot_holder:1b}}}}]

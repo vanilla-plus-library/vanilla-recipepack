@@ -4,6 +4,7 @@
 # Check buttons
 function vplib:custom_crafting/v1/block/table/gui/buttons/main
 
+
 # Get container
 data modify storage vplib:temp array set from storage vplib:temp container
 
@@ -24,6 +25,15 @@ data remove storage vplib:temp array[{Slot:22b}]
 # Remove output
 data remove storage vplib:temp array[{Slot:16b}]
 
+# Summon items at nearest player
+scoreboard players set #set_owner vpcr.temp 0
+execute if data storage vplib:temp array[0] at @p positioned ~ ~0.5 ~ run function vplib:custom_crafting/v1/block/table/general/summon_items
+
+# Kill and clear slot holder items
+kill @e[type=item,nbt={Item:{tag:{vplib:{slot_holder:1b}}}}]
+clear @a[distance=..8] minecraft:gray_stained_glass_pane{vplib:{slot_holder:1b}}
+
+
 # Set slot holders
 replaceitem block ~ ~ ~ container.0 minecraft:gray_stained_glass_pane{HideFlags:63,CustomModelData:430000,vplib:{slot_holder:1b,type:1b},display:{Name:'""'}}
 replaceitem block ~ ~ ~ container.1 minecraft:gray_stained_glass_pane{HideFlags:63,CustomModelData:430000,vplib:{slot_holder:1b,type:1b},display:{Name:'""'}}
@@ -42,15 +52,6 @@ replaceitem block ~ ~ ~ container.23 minecraft:gray_stained_glass_pane{HideFlags
 replaceitem block ~ ~ ~ container.24 minecraft:gray_stained_glass_pane{HideFlags:63,CustomModelData:430000,vplib:{slot_holder:1b,type:1b},display:{Name:'""'}}
 replaceitem block ~ ~ ~ container.25 minecraft:gray_stained_glass_pane{HideFlags:63,CustomModelData:430000,vplib:{slot_holder:1b,type:1b},display:{Name:'""'}}
 replaceitem block ~ ~ ~ container.26 minecraft:gray_stained_glass_pane{HideFlags:63,CustomModelData:430000,vplib:{slot_holder:1b,type:1b},display:{Name:'""'}}
-
-
-# Summon inserted item at nearest player
-scoreboard players set #set_owner vpcr.temp 0
-execute if data storage vplib:temp array[0] at @p positioned ~ ~1 ~ run function vplib:custom_crafting/v1/block/table/general/summon_items
-
-# Kill and clear slot holder items
-kill @e[type=item,nbt={Item:{tag:{vplib:{slot_holder:1b}}}}]
-clear @a[distance=..8] minecraft:gray_stained_glass_pane{vplib:{slot_holder:1b}}
 
 # Update container
 data modify storage vplib:temp container set from block ~ ~ ~ Items
