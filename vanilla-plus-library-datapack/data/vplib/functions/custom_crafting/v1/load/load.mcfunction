@@ -16,13 +16,12 @@ data modify storage vplib:data modules."custom_crafting".version.breaking set va
 tellraw @a[tag=vplib.debug] [{"text":"[Debug]: ","color":"yellow","bold":true},{"text":"Loaded Vanilla+ Library: Custom Crafting v1","color":"white","bold":false}]
 
 # Setup
-scoreboard objectives add vpcc.recipe dummy
-scoreboard objectives add vpcc.saved dummy
+scoreboard objectives add vplib.recipe dummy
 
 
 # Update recipe registry
-scoreboard players reset * vpcc.recipe
-scoreboard players set $register vpcc.recipe 0
+scoreboard players reset * vplib.recipe
+scoreboard players set $register vplib.recipe 0
 
-scoreboard players set #vplib.load vpcc.recipe 0
+scoreboard players set #vplib.load vplib.recipe 0
 schedule function vplib:custom_crafting/v1/load/recipes 5t replace

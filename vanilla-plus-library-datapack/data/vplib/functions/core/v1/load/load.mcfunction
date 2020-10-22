@@ -5,9 +5,9 @@
 # Version: 1
 
 # Setup
-scoreboard objectives add vpcr.data dummy
-scoreboard objectives add vpcr.temp dummy
-scoreboard objectives add vpcr.math dummy
+scoreboard objectives add vplib.data dummy
+scoreboard objectives add vplib.temp dummy
+scoreboard objectives add vplib.math dummy
 
 # VERSION Set storage
 

@@ -1,5 +1,5 @@
 #> vplib:custom_crafting/v1/block/table/gui/slot_holders
-# DEBUG tellraw @p {"score":{"name":"#slot_holders","objective":"vpcr.temp"}}
+# DEBUG tellraw @p {"score":{"name":"#slot_holders","objective":"vplib.temp"}}
 
 # Check buttons
 function vplib:custom_crafting/v1/block/table/gui/buttons/main
@@ -26,7 +26,7 @@ data remove storage vplib:temp array[{Slot:22b}]
 data remove storage vplib:temp array[{Slot:16b}]
 
 # Summon items at nearest player
-scoreboard players set #set_owner vpcr.temp 0
+scoreboard players set #set_owner vplib.temp 0
 execute if data storage vplib:temp array[0] at @p positioned ~ ~0.5 ~ run function vplib:custom_crafting/v1/block/table/general/summon_items
 
 # Kill and clear slot holder items

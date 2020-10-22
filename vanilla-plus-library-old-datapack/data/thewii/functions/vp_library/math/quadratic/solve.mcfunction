@@ -12,71 +12,71 @@
 
 tellraw @s[tag=twvp.debug] ["--- Quadratic Equations ---"]
 tellraw @s[tag=twvp.debug] ["x = -b +- sqrt( b**2 -4 * a * c) / 2 * a"]
-tellraw @s[tag=twvp.debug] [{"score":{"name":"#input_a","objective":"vpcr.temp"}},"x**2 + ",{"score":{"name":"#input_b","objective":"vpcr.temp"}},"x + ",{"score":{"name":"#input_c","objective":"vpcr.temp"}}," = 0"]
+tellraw @s[tag=twvp.debug] [{"score":{"name":"#input_a","objective":"vplib.temp"}},"x**2 + ",{"score":{"name":"#input_b","objective":"vplib.temp"}},"x + ",{"score":{"name":"#input_c","objective":"vplib.temp"}}," = 0"]
 tellraw @s[tag=twvp.debug] [""]
-tellraw @s[tag=twvp.debug] ["x = -(",{"score":{"name":"#input_b","objective":"vpcr.temp"}},") +- sqrt( (",{"score":{"name":"#input_b","objective":"vpcr.temp"}},")**2 -4 * ",{"score":{"name":"#input_a","objective":"vpcr.temp"}}," * ",{"score":{"name":"#input_c","objective":"vpcr.temp"}},") / 2 * ",{"score":{"name":"#input_a","objective":"vpcr.temp"}}]
+tellraw @s[tag=twvp.debug] ["x = -(",{"score":{"name":"#input_b","objective":"vplib.temp"}},") +- sqrt( (",{"score":{"name":"#input_b","objective":"vplib.temp"}},")**2 -4 * ",{"score":{"name":"#input_a","objective":"vplib.temp"}}," * ",{"score":{"name":"#input_c","objective":"vplib.temp"}},") / 2 * ",{"score":{"name":"#input_a","objective":"vplib.temp"}}]
 
 
 # Resolve signal operation in x = -(b) ..
-scoreboard players operation #minus_b vpcr.temp = #input_b vpcr.temp
-scoreboard players operation #minus_b vpcr.temp *= #-1 twvp.math
+scoreboard players operation #minus_b vplib.temp = #input_b vplib.temp
+scoreboard players operation #minus_b vplib.temp *= #-1 twvp.math
 
-tellraw @s[tag=twvp.debug] ["x = ",{"score":{"name":"#minus_b","objective":"vpcr.temp"}}," +- sqrt( (",{"score":{"name":"#input_b","objective":"vpcr.temp"}},")**2 -4 * ",{"score":{"name":"#input_a","objective":"vpcr.temp"}}," * ",{"score":{"name":"#input_c","objective":"vpcr.temp"}},") / 2 * ",{"score":{"name":"#input_a","objective":"vpcr.temp"}}]
+tellraw @s[tag=twvp.debug] ["x = ",{"score":{"name":"#minus_b","objective":"vplib.temp"}}," +- sqrt( (",{"score":{"name":"#input_b","objective":"vplib.temp"}},")**2 -4 * ",{"score":{"name":"#input_a","objective":"vplib.temp"}}," * ",{"score":{"name":"#input_c","objective":"vplib.temp"}},") / 2 * ",{"score":{"name":"#input_a","objective":"vplib.temp"}}]
 
 
 # Calculate discriminant (b ** 2 - 4 * a * c)
-scoreboard players operation #discriminant vpcr.temp = #input_b vpcr.temp
-scoreboard players operation #discriminant vpcr.temp *= #discriminant vpcr.temp
+scoreboard players operation #discriminant vplib.temp = #input_b vplib.temp
+scoreboard players operation #discriminant vplib.temp *= #discriminant vplib.temp
 
-tellraw @s[tag=twvp.debug] ["x = ",{"score":{"name":"#minus_b","objective":"vpcr.temp"}}," +- sqrt( ",{"score":{"name":"#discriminant","objective":"vpcr.temp"}}," -4 * ",{"score":{"name":"#input_a","objective":"vpcr.temp"}}," * ",{"score":{"name":"#input_c","objective":"vpcr.temp"}},") / 2 * ",{"score":{"name":"#input_a","objective":"vpcr.temp"}}]
+tellraw @s[tag=twvp.debug] ["x = ",{"score":{"name":"#minus_b","objective":"vplib.temp"}}," +- sqrt( ",{"score":{"name":"#discriminant","objective":"vplib.temp"}}," -4 * ",{"score":{"name":"#input_a","objective":"vplib.temp"}}," * ",{"score":{"name":"#input_c","objective":"vplib.temp"}},") / 2 * ",{"score":{"name":"#input_a","objective":"vplib.temp"}}]
 
-scoreboard players set #discriminant.4ac vpcr.temp -4
-scoreboard players operation #discriminant.4ac vpcr.temp *= #input_a vpcr.temp
-scoreboard players operation #discriminant.4ac vpcr.temp *= #input_c vpcr.temp
+scoreboard players set #discriminant.4ac vplib.temp -4
+scoreboard players operation #discriminant.4ac vplib.temp *= #input_a vplib.temp
+scoreboard players operation #discriminant.4ac vplib.temp *= #input_c vplib.temp
 
-tellraw @s[tag=twvp.debug] ["x = ",{"score":{"name":"#minus_b","objective":"vpcr.temp"}}," +- sqrt( ",{"score":{"name":"#discriminant","objective":"vpcr.temp"}}," ",{"score":{"name":"#discriminant.4ac","objective":"vpcr.temp"}},") / 2 * ",{"score":{"name":"#input_a","objective":"vpcr.temp"}}]
+tellraw @s[tag=twvp.debug] ["x = ",{"score":{"name":"#minus_b","objective":"vplib.temp"}}," +- sqrt( ",{"score":{"name":"#discriminant","objective":"vplib.temp"}}," ",{"score":{"name":"#discriminant.4ac","objective":"vplib.temp"}},") / 2 * ",{"score":{"name":"#input_a","objective":"vplib.temp"}}]
 
-scoreboard players operation #discriminant vpcr.temp += #discriminant.4ac vpcr.temp
+scoreboard players operation #discriminant vplib.temp += #discriminant.4ac vplib.temp
 
-tellraw @s[tag=twvp.debug] ["x = ",{"score":{"name":"#minus_b","objective":"vpcr.temp"}}," +- sqrt( ",{"score":{"name":"#discriminant","objective":"vpcr.temp"}},") / 2 * ",{"score":{"name":"#input_a","objective":"vpcr.temp"}}]
+tellraw @s[tag=twvp.debug] ["x = ",{"score":{"name":"#minus_b","objective":"vplib.temp"}}," +- sqrt( ",{"score":{"name":"#discriminant","objective":"vplib.temp"}},") / 2 * ",{"score":{"name":"#input_a","objective":"vplib.temp"}}]
 
 
 # Calculate sqrt of discriminant
-scoreboard players set #scale_factor vpcr.temp 10
+scoreboard players set #scale_factor vplib.temp 10
 
-scoreboard players operation #input vpcr.temp = #discriminant vpcr.temp
-scoreboard players operation #input vpcr.temp *= #10 twvp.math
+scoreboard players operation #input vplib.temp = #discriminant vplib.temp
+scoreboard players operation #input vplib.temp *= #10 twvp.math
 
 function #vplib:math/api/quadratic/solve
 
-scoreboard players operation #sqrt vpcr.temp = #output vpcr.temp
+scoreboard players operation #sqrt vplib.temp = #output vplib.temp
 
-tellraw @s[tag=twvp.debug] ["x = ",{"score":{"name":"#minus_b","objective":"vpcr.temp"}}," +- ",{"score":{"name":"#sqrt","objective":"vpcr.temp"}}," / 2 * ",{"score":{"name":"#input_a","objective":"vpcr.temp"}}]
+tellraw @s[tag=twvp.debug] ["x = ",{"score":{"name":"#minus_b","objective":"vplib.temp"}}," +- ",{"score":{"name":"#sqrt","objective":"vplib.temp"}}," / 2 * ",{"score":{"name":"#input_a","objective":"vplib.temp"}}]
 
 
 # Multiply the numbers in ... / 2 * a
-scoreboard players set #divider vpcr.temp 2
-scoreboard players operation #divider vpcr.temp *= #input_a vpcr.temp
+scoreboard players set #divider vplib.temp 2
+scoreboard players operation #divider vplib.temp *= #input_a vplib.temp
 
-tellraw @s[tag=twvp.debug] ["x = ",{"score":{"name":"#minus_b","objective":"vpcr.temp"}}," +- ",{"score":{"name":"#sqrt","objective":"vpcr.temp"}}," / ",{"score":{"name":"#divider","objective":"vpcr.temp"}}]
+tellraw @s[tag=twvp.debug] ["x = ",{"score":{"name":"#minus_b","objective":"vplib.temp"}}," +- ",{"score":{"name":"#sqrt","objective":"vplib.temp"}}," / ",{"score":{"name":"#divider","objective":"vplib.temp"}}]
 
 # Scale factor
-scoreboard players operation #minus_b vpcr.temp *= #10 twvp.math
-scoreboard players operation #divider vpcr.temp *= #10 twvp.math
+scoreboard players operation #minus_b vplib.temp *= #10 twvp.math
+scoreboard players operation #divider vplib.temp *= #10 twvp.math
 
-tellraw @s[tag=twvp.debug] ["x = ",{"score":{"name":"#minus_b","objective":"vpcr.temp"}}," +- ",{"score":{"name":"#sqrt","objective":"vpcr.temp"}}," / ",{"score":{"name":"#divider","objective":"vpcr.temp"}}]
+tellraw @s[tag=twvp.debug] ["x = ",{"score":{"name":"#minus_b","objective":"vplib.temp"}}," +- ",{"score":{"name":"#sqrt","objective":"vplib.temp"}}," / ",{"score":{"name":"#divider","objective":"vplib.temp"}}]
 
 # Get first solution
-scoreboard players operation #sol1 vpcr.temp = #minus_b vpcr.temp
-scoreboard players operation #sol1 vpcr.temp -= #sqrt vpcr.temp
-scoreboard players operation #sol1 vpcr.temp /= #divider vpcr.temp
+scoreboard players operation #sol1 vplib.temp = #minus_b vplib.temp
+scoreboard players operation #sol1 vplib.temp -= #sqrt vplib.temp
+scoreboard players operation #sol1 vplib.temp /= #divider vplib.temp
 
 # Get second solution
-scoreboard players operation #sol2 vpcr.temp = #minus_b vpcr.temp
-scoreboard players operation #sol2 vpcr.temp += #sqrt vpcr.temp
-scoreboard players operation #sol2 vpcr.temp /= #divider vpcr.temp
+scoreboard players operation #sol2 vplib.temp = #minus_b vplib.temp
+scoreboard players operation #sol2 vplib.temp += #sqrt vplib.temp
+scoreboard players operation #sol2 vplib.temp /= #divider vplib.temp
 
-tellraw @s[tag=twvp.debug] ["x' = ",{"score":{"name":"#sol1","objective":"vpcr.temp"}}]
-tellraw @s[tag=twvp.debug] ["x'' = ",{"score":{"name":"#sol2","objective":"vpcr.temp"}}]
+tellraw @s[tag=twvp.debug] ["x' = ",{"score":{"name":"#sol1","objective":"vplib.temp"}}]
+tellraw @s[tag=twvp.debug] ["x'' = ",{"score":{"name":"#sol2","objective":"vplib.temp"}}]
 
 tellraw @s[tag=twvp.debug] ["-----------------------"]

@@ -6,8 +6,8 @@
 summon minecraft:item ~ ~ ~ {Item:{id:"minecraft:stone",Count:1b},Tags:["vplib.dropped"]}
 
 # Store item
-scoreboard players set #set_item vpcr.temp 1
-scoreboard players set #set_delay vpcr.temp 0
+scoreboard players set #set_item vplib.temp 1
+scoreboard players set #set_delay vplib.temp 0
 execute as @e[type=item,tag=vplib.dropped,limit=1] run function vplib:custom_crafting/v1/block/table/general/summon_items_2
 
 # Loop

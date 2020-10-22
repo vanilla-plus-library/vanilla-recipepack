@@ -19,4 +19,4 @@ tellraw @a[tag=vplib.debug] [{"text":"[Debug]: ","color":"yellow","bold":true},{
 function vplib:math/v1/core/constants
 
 # Load LCG seed
-execute unless score #lcg vpcr.math matches 0.. run function vplib:math/v1/lcg/reset_seed
+execute unless score #lcg vplib.math matches 0.. run function vplib:math/v1/lcg/reset_seed
