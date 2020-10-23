@@ -8,6 +8,7 @@ data modify storage vplib:temp recipeOutput set value {}
 execute if data storage vplib:temp containerGrid[0] run function vplib:custom_crafting/v1/block/table/gui/grid/recipes
 
 # DEBUG Grid update
+#say Updated grid.
 #tellraw @a ["Last check:",{"nbt":"savedData.recipeInput","storage":"vplib:temp"}]
 #tellraw @a ["Current check:",{"nbt":"containerGrid","storage":"vplib:temp"}]
 #tellraw @a ["Last Output:",{"nbt":"savedData.recipeOutput","storage":"vplib:temp"}]

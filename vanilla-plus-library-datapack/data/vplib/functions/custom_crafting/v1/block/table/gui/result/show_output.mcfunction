@@ -11,4 +11,5 @@ data modify storage vplib:temp item.Slot set value 16b
 execute if data storage vplib:temp item.id run data modify block ~ ~ ~ Items[{Slot:16b}] set from storage vplib:temp item
 
 # DEBUG Show output
+#say Updated result.
 #tellraw @a ["Showing result: ",{"nbt":"item","storage":"vplib:temp"}]

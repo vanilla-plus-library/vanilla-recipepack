@@ -48,4 +48,5 @@ execute if score #update_result vplib.temp matches 0 if score @s vplib.data matc
 
 
 # Save data
+#execute if score #save_data vplib.temp matches 1 run say Saving data.
 execute if score #save_data vplib.temp matches 1 run data modify entity @s ArmorItems[3].tag.vplib set from storage vplib:temp savedData
