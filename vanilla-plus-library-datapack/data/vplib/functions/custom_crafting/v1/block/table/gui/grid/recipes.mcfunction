@@ -5,7 +5,7 @@
 data modify storage vplib:temp recipeInput set from storage vplib:temp containerGrid
 
 # Get amount of items in the grid
-execute store result score #amount vplib.temp if data storage vplib:temp containerGrid[]
+execute store result score #amount vplib.temp if data storage vplib:temp recipeInput[]
 
 # Check recipes based on the amount of items(improves performance)
 execute if score #amount vplib.temp matches 1 run function #vplib:custom_crafting/api/table/recipes/1
@@ -17,3 +17,4 @@ execute if score #amount vplib.temp matches 6 run function #vplib:custom_craftin
 execute if score #amount vplib.temp matches 7 run function #vplib:custom_crafting/api/table/recipes/7
 execute if score #amount vplib.temp matches 8 run function #vplib:custom_crafting/api/table/recipes/8
 execute if score #amount vplib.temp matches 9 run function #vplib:custom_crafting/api/table/recipes/9
+execute if score #recipe vplib.temp matches 0 run function #vplib:custom_crafting/api/table/recipes/any

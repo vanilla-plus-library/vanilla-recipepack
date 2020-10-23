@@ -2,7 +2,7 @@
 
 # Increase
 scoreboard players add #vplib.load vplib.recipe 1
-execute unless score #vplib.load vplib.recipe matches 1..9 run scoreboard players reset #vplib.load vplib.recipe
+execute unless score #vplib.load vplib.recipe matches 1..10 run scoreboard players reset #vplib.load vplib.recipe
 
 # Schedule next tick
 execute if score #vplib.load vplib.recipe matches 1.. run schedule function vplib:custom_crafting/v1/load/recipes 1t replace
@@ -21,6 +21,7 @@ execute if score #vplib.load vplib.recipe matches 6 run function #vplib:custom_c
 execute if score #vplib.load vplib.recipe matches 7 run function #vplib:custom_crafting/api/table/recipes/7
 execute if score #vplib.load vplib.recipe matches 8 run function #vplib:custom_crafting/api/table/recipes/8
 execute if score #vplib.load vplib.recipe matches 9 run function #vplib:custom_crafting/api/table/recipes/9
+execute if score #vplib.load vplib.recipe matches 10 run function #vplib:custom_crafting/api/table/recipes/any
 
 # DEBUG Message
-execute if score #vplib.load vplib.recipe matches 9 run tellraw @a[tag=vplib.debug] [{"text":"[Debug]: ","color":"yellow","bold":true},{"score":{"name":"$register","objective": "vplib.recipe"},"color":"white","bold":false},{"text":" recipes loaded.","color":"white","bold":false}]
+execute if score #vplib.load vplib.recipe matches 10 run tellraw @a[tag=vplib.debug] [{"text":"[Debug]: ","color":"yellow","bold":true},{"score":{"name":"$register","objective": "vplib.recipe"},"color":"white","bold":false},{"text":" recipes loaded.","color":"white","bold":false}]
