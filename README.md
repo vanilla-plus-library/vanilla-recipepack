@@ -9,5 +9,5 @@ Vanilla+ Library is a library data pack for Minecraft 1.16+. Its functionalities
 - Custom durability for tools;
 
 The current available modules are:
-- [Core](https://github.com/TheWii/vanilla-plus-library/tree/custom-crafting/vplib-core-datapack)
-- [Custom Crafting](https://github.com/TheWii/vanilla-plus-library/tree/custom-crafting/vplib-custom-crafting-datapack)
+- [Core](https://github.com/TheWii/vanilla-plus-library/tree/master/vplib-core-datapack)
+- [Custom Crafting](https://github.com/TheWii/vanilla-plus-library/tree/master/vplib-custom-crafting-datapack)
