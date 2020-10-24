@@ -12,10 +12,10 @@ scoreboard objectives add vplib.math dummy
 # VERSION Set storage
 
 ## Current
-data modify storage vplib:data modules.core.version.current set value 1
+execute store result storage vplib:data modules.core.version.current int 1 run scoreboard players get #vplib.core.current vplib.load
 
 ## Breaking
-data modify storage vplib:data modules.core.version.breaking set value 1
+execute store result storage vplib:data modules.core.version.breaking int 1 run scoreboard players get #vplib.core.breaking vplib.load
 
 # DEBUG Message
 tellraw @a[tag=vplib.debug] [{"text":"[Debug]: ","color":"yellow","bold":true},{"text":"Loaded Vanilla+ Library: Core v1","color":"white","bold":false}]

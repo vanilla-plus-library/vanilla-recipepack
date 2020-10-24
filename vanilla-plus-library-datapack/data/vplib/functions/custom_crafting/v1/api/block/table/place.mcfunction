@@ -3,4 +3,4 @@
 # From: #vplib:custom_crafting/api/block/table/place
 
 # Run function if lib version matches
-execute if data storage vplib:data modules."custom_crafting".version{current: 1} run function vplib:custom_crafting/v1/block/table/place
+execute if score #vplib.custom_crafting.current vplib.load matches 1 run function vplib:custom_crafting/v1/block/table/place

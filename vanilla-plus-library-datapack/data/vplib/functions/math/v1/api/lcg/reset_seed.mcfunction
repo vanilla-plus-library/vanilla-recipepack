@@ -3,4 +3,4 @@
 # From: #vplib:math/api/lcg/ranged
 
 # Run function if lib version matches
-execute if data storage vplib:data modules.math.version{current: 1} run function vplib:math/v1/lcg/reset_seed
+execute if score #vplib.math.current vplib.load matches 1 run function vplib:math/v1/lcg/reset_seed

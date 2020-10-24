@@ -1,5 +1,5 @@
 {
     "values": [
-        "#vplib:core/load/init"
+        "#vplib:load/init"
     ]
 }

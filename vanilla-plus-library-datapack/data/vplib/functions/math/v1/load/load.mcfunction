@@ -7,10 +7,10 @@
 # VERSION Set storage
 
 ## Current
-data modify storage vplib:data modules.math.version.current set value 1
+execute store result storage vplib:data modules.math.version.current int 1 run scoreboard players get #vplib.math.current vplib.load
 
 ## Breaking
-data modify storage vplib:data modules.math.version.breaking set value 1
+execute store result storage vplib:data modules.math.version.breaking int 1 run scoreboard players get #vplib.math.breaking vplib.load
 
 # DEBUG Message
 tellraw @a[tag=vplib.debug] [{"text":"[Debug]: ","color":"yellow","bold":true},{"text":"Loaded Vanilla+ Library: Math v1","color":"white","bold":false}]

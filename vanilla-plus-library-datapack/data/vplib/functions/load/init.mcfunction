@@ -1,4 +1,4 @@
-#> vplib:core/api/load/init
+#> vplib:load/init
 # Description: Initialize versioning objective and load core module.
 # From: '#vplib:core/load/init(#minecraft:load)'
 

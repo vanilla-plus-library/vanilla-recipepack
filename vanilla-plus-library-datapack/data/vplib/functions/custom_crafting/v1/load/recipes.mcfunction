@@ -8,8 +8,9 @@ execute unless score #vplib.load vplib.recipe matches 1..10 run scoreboard playe
 execute if score #vplib.load vplib.recipe matches 1.. run schedule function vplib:custom_crafting/v1/load/recipes 1t replace
 
 # Reset data to run faster
-data remove storage vplib:temp containerGrid
+data remove storage vplib:temp recipeInput
 scoreboard players set #recipe vplib.temp -1
+scoreboard players set #amount vplib.temp 0
 
 # Load recipes
 execute if score #vplib.load vplib.recipe matches 1 run function #vplib:custom_crafting/api/table/recipes/1
