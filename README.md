@@ -1,15 +1,13 @@
 # Vanilla+ Library
 
-Vanilla+ Library or Vanilla Plus Library is a library datapack created and commonly used by TheWii in their datapacks. It contains a bunch of modules that are installed and uninstalled separately by the datapacks. Some modules are dependent from third modules.
+Vanilla+ Library is a library data pack for Minecraft 1.16+. Its functionalities are divided into multiple modules that can be installed independently from each other. It aims to provide efficient tools for data packs to add custom features to the vanilla gameplay with ease. With this library the user would be able to:
+- Add custom recipes using a powerful custom crafting library;
+- Use math functions such as pRNG and sqrt;
+- Simulate custom block placement;
+- Detect right-click using carrot on a stick/warped fungus on a stick or villagers;
+- Replace a specific item in the inventory of a player;
+- Custom durability for tools;
 
 The current available modules are:
-
-- **Loaded Chunk:** Adds a forceloaded chunk containing some useful blocks like a shulker box to manipulate player inventory, sign to resolve json, hopper and dropper for inventory purpose.
-- **Click Detections:** Adds a system to detect right-click with carrots on a sticks and warped fungus on a stick. It also adds a villager click system.
-- **Block Placement:** Adds a way to simulate custom block placement using Blast Furnaces with a known Lock id.
-- **Math:** Adds a LCG for PRNG purpose. 
-- **Inventory:** Adds a custom damage system and functions to damage mainhand, offhand and any slot in the inventory. It also adds some basic functions to draw/insert items from containers. **(Requires Loaded Chunk)**
-- **Generation:** Adds a world generation system to generate ores and structures using mcfunction. It's currently unused and probably will be removed and replaced by 1.16 WorldGen. **(Requires Math)**
-
-It also has some useful external-datapacks merged into it to reduce the number of datapacks installed. They are:
-- **Minecraft Raycast Collision Detection.**
+- [Core](https://github.com/TheWii/vanilla-plus-library/tree/custom-crafting/vplib-core-datapack)
+- [Custom Crafting](https://github.com/TheWii/vanilla-plus-library/tree/custom-crafting/vplib-custom-crafting-datapack)
