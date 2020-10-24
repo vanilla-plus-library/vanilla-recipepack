@@ -1,1 +1,0 @@
-execute if data storage thewii:vp_library/data modules.click_detections run function thewii:vp_library/click_detections/tick
