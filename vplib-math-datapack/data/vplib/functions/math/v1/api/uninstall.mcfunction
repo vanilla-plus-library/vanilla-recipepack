@@ -1,5 +1,4 @@
 #> vplib:math/v1/api/uninstall
-# Description: Uninstall module.
 # From: #vplib:math/api/uninstall
 
 # Run function if lib version matches

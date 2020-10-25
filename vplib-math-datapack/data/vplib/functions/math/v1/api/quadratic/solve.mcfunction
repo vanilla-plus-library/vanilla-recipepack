@@ -1,5 +1,4 @@
 #> vplib:math/v1/api/quadratic/solve
-# Description: Quadratic equation.
 # From: #vplib:math/api/quadratic/solve
 
 # Run function if lib version matches

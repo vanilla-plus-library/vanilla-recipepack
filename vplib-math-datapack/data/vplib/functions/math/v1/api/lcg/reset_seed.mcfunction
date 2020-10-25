@@ -1,5 +1,4 @@
 #> vplib:math/v1/api/lcg/reset_seed
-# Description: Reset LCG seed.
 # From: #vplib:math/api/lcg/ranged
 
 # Run function if lib version matches

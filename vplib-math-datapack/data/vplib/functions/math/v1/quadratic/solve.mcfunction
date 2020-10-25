@@ -1,48 +1,43 @@
 #> vplib:math/v1/quadratic/solve
 
-# INPUT VALUES
-# a = #input.a
-# b = #input.b
-# c = #input.c
+# Calculate discriminant
 
-# OUTPUT VALUES
-# x'  = #sol1
-# x'' = #sol2
-
-
-# x = -b +- sqrt( b**2 - 4 * a * c) / 2 * a
-
-# Resolve signal operation in x = -(b) ..
-scoreboard players operation #minus_b vplib.temp = #input.b vplib.temp
-scoreboard players operation #minus_b vplib.temp *= #-1 vplib.math
-
-# Calculate discriminant (b ** 2 - 4 * a * c)
-scoreboard players operation #discriminant vplib.temp = #input.b vplib.temp
+## b ** 2
+scoreboard players operation #discriminant vplib.temp = #input.b vplib.math
 scoreboard players operation #discriminant vplib.temp *= #discriminant vplib.temp
 
-scoreboard players set #discriminant.4ac vplib.temp -4
-scoreboard players operation #discriminant.4ac vplib.temp *= #input.a vplib.temp
-scoreboard players operation #discriminant.4ac vplib.temp *= #input.c vplib.temp
+## -4 * a * c
+scoreboard players set #discriminant_2 vplib.temp -4
+scoreboard players operation #discriminant_2 vplib.temp *= #input.a vplib.math
+scoreboard players operation #discriminant_2 vplib.temp *= #input.c vplib.math
 
-scoreboard players operation #discriminant vplib.temp += #discriminant.4ac vplib.temp
+scoreboard players operation #discriminant vplib.temp += #discriminant_2 vplib.temp
 
-# Calculate sqrt of discriminant
-scoreboard players set #scale_factor vplib.temp 10
+
+# Calculate square root
+scoreboard players set #scale_factor vplib.math 10
 
 scoreboard players operation #input vplib.math = #discriminant vplib.temp
-scoreboard players operation #input vplib.math *= #10 vplib.math
+scoreboard players operation #input vplib.math *= #scale_factor vplib.math
 
-function thewii:vp_library/math/sqrt/start
+function vplib:math/v1/sqrt/solve
 
 scoreboard players operation #sqrt vplib.temp = #output vplib.temp
 
-# Multiply the numbers in ... / 2 * a
+
+# Invert b signal
+scoreboard players operation #minus_b vplib.temp = #input.b vplib.math
+scoreboard players operation #minus_b vplib.temp *= #-1 vplib.math
+
+# Calculate divider
 scoreboard players set #divider vplib.temp 2
-scoreboard players operation #divider vplib.temp *= #input.a vplib.temp
+scoreboard players operation #divider vplib.temp *= #input.a vplib.math
+
 
 # Scale factor
-scoreboard players operation #minus_b vplib.temp *= #10 vplib.math
-scoreboard players operation #divider vplib.temp *= #10 vplib.math
+scoreboard players operation #minus_b vplib.temp *= #scale_factor vplib.math
+scoreboard players operation #divider vplib.temp *= #scale_factor vplib.math
+
 
 # Get first solution
 scoreboard players operation #sol1 vplib.math = #minus_b vplib.temp
