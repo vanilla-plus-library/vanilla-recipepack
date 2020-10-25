@@ -15,6 +15,7 @@ execute store result storage vplib:data modules."custom_crafting".version.breaki
 # DEBUG Message
 tellraw @a[tag=vplib.debug] [{"text":"[Debug]: ","color":"yellow","bold":true},{"text":"Loaded Vanilla+ Library: Custom Crafting v1","color":"white","bold":false}]
 
+
 # Setup
 scoreboard objectives add vplib.recipe dummy
 

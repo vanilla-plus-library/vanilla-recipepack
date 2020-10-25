@@ -15,6 +15,7 @@ execute store result storage vplib:data modules.math.version.breaking int 1 run 
 # DEBUG Message
 tellraw @a[tag=vplib.debug] [{"text":"[Debug]: ","color":"yellow","bold":true},{"text":"Loaded Vanilla+ Library: Math v1","color":"white","bold":false}]
 
+
 # Load constants
 function vplib:math/v1/core/constants
 

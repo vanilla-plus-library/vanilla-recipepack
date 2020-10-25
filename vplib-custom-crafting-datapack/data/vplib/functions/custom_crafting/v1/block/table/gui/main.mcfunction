@@ -12,11 +12,9 @@ data modify storage vplib:temp savedData set from entity @s ArmorItems[3].tag.vp
 # Move container to storage.
 data modify storage vplib:temp container set from block ~ ~ ~ Items
 
-
 # Check slot holders.
 execute store result score #slot_holders vplib.temp if data storage vplib:temp container[{Count:1b,tag:{vplib:{slot_holder:1b,type:1b}}}]
 execute unless score #slot_holders vplib.temp matches 17 run function vplib:custom_crafting/v1/block/table/gui/slot_holders
-
 
 # Get result slot.
 function vplib:custom_crafting/v1/block/table/general/get_result

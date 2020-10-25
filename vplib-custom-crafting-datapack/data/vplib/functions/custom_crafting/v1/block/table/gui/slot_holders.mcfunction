@@ -21,6 +21,7 @@ data remove storage vplib:temp array[{Slot:13b}]
 data remove storage vplib:temp array[{Slot:20b}]
 data remove storage vplib:temp array[{Slot:21b}]
 data remove storage vplib:temp array[{Slot:22b}]
+data modify storage vplib:temp array append from storage vplib:temp item
 
 # Remove output
 data remove storage vplib:temp array[{Slot:16b}]
