@@ -5,7 +5,7 @@ execute unless score #scale_factor vplib.math matches 10..100000 run scoreboard 
 
 # Convert Hue
 execute if score #hsv.h_degrees vplib.math matches 1 run function vplib:math/v1/color/hsv_to_rgb/convert_hue
-tellraw @a[tag=vplib.debug] ["Converted hue: ",{"score":{"name": "#hsv.h","objective": "vplib.math"}}]
+#tellraw @a[tag=vplib.debug] ["Converted hue: ",{"score":{"name": "#hsv.h","objective": "vplib.math"}}]
 
 # H = 60
 # S = 50
@@ -21,14 +21,14 @@ scoreboard players operation #i vplib.temp = #hsv.h vplib.math
 scoreboard players operation #i vplib.temp *= #6 vplib.math
 scoreboard players operation #i vplib.temp /= #scale_factor vplib.math
 scoreboard players operation #i vplib.temp *= #scale_factor vplib.math
-tellraw @a[tag=vplib.debug] ["I: ",{"score":{"name": "#i","objective": "vplib.temp"}}]
+#tellraw @a[tag=vplib.debug] ["I: ",{"score":{"name": "#i","objective": "vplib.temp"}}]
 # I = 300
 
 # Get F 
 scoreboard players operation #f vplib.temp = #hsv.h vplib.math 
 scoreboard players operation #f vplib.temp *= #6 vplib.math
 scoreboard players operation #f vplib.temp -= #i vplib.temp
-tellraw @a[tag=vplib.debug] ["F: ",{"score":{"name": "#f","objective": "vplib.temp"}}]
+#tellraw @a[tag=vplib.debug] ["F: ",{"score":{"name": "#f","objective": "vplib.temp"}}]
 # 60
 
 # Get P
@@ -36,7 +36,7 @@ scoreboard players operation #p vplib.temp = #scale_factor vplib.math
 scoreboard players operation #p vplib.temp -= #hsv.s vplib.math
 scoreboard players operation #p vplib.temp *= #hsv.v vplib.math
 scoreboard players operation #p vplib.temp /= #scale_factor vplib.math
-tellraw @a[tag=vplib.debug] ["P: ",{"score":{"name": "#p","objective": "vplib.temp"}}]
+#tellraw @a[tag=vplib.debug] ["P: ",{"score":{"name": "#p","objective": "vplib.temp"}}]
 # 50
 
 # Get Q
@@ -47,7 +47,7 @@ scoreboard players operation #q vplib.temp /= #scale_factor vplib.math
 scoreboard players operation #q vplib.temp += #scale_factor vplib.math
 scoreboard players operation #q vplib.temp *= #hsv.v vplib.math
 scoreboard players operation #q vplib.temp /= #scale_factor vplib.math
-tellraw @a[tag=vplib.debug] ["Q: ",{"score":{"name": "#q","objective": "vplib.temp"}}]
+#tellraw @a[tag=vplib.debug] ["Q: ",{"score":{"name": "#q","objective": "vplib.temp"}}]
 # 70
 
 # Get T
@@ -59,7 +59,7 @@ scoreboard players operation #t vplib.temp *= #-1 vplib.math
 scoreboard players operation #t vplib.temp += #scale_factor vplib.math
 scoreboard players operation #t vplib.temp *= #hsv.v vplib.math
 scoreboard players operation #t vplib.temp /= #scale_factor vplib.math
-tellraw @a[tag=vplib.debug] ["T: ",{"score":{"name": "#t","objective": "vplib.temp"}}]
+#tellraw @a[tag=vplib.debug] ["T: ",{"score":{"name": "#t","objective": "vplib.temp"}}]
 # 80
 
 # Switch cases
