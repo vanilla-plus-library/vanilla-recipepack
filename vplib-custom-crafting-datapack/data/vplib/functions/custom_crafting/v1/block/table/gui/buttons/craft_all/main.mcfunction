@@ -26,12 +26,12 @@ data modify storage vplib:temp array set value []
 
 scoreboard players set #127 vplib.math 127
 scoreboard players set #slot vplib.temp -1
-function vplib:custom_crafting/v1/block/table/gui/buttons/craft_all/loop
+execute if score #output vplib.temp matches 1.. run function vplib:custom_crafting/v1/block/table/gui/buttons/craft_all/loop
 
 
 # Search players
 scoreboard players set #found_player vplib.temp 0
-execute as @a[distance=..12] run function vplib:custom_crafting/v1/block/table/gui/buttons/craft_all/search_player
+execute if score #output vplib.temp matches 1.. as @a[distance=..12] run function vplib:custom_crafting/v1/block/table/gui/buttons/craft_all/search_player
 
 # Subtract grid if player was found
 execute if score #found_player vplib.temp matches 1 run function vplib:custom_crafting/v1/block/table/gui/buttons/craft_all/subtract_grid
