@@ -42,7 +42,7 @@ execute if score #update_grid vplib.temp matches 1 run function vplib:custom_cra
 execute if score #update_result vplib.temp matches 1 run function vplib:custom_crafting/v1/block/table/gui/result/show_output
 
 # Check if result slot holder changed
-execute if score #update_result vplib.temp matches 0 if score @s vplib.data matches 0 unless data storage vplib:temp containerResult{Count:1b,tag:{vplib:{slot_holder:1b,type:2b}}} run function vplib:custom_crafting/v1/block/table/gui/result/drop_item
+execute if score #update_result vplib.temp matches 0 unless score @s vplib.data matches 1.. unless data storage vplib:temp containerResult{Count:1b,tag:{vplib:{slot_holder:1b,type:2b}}} run function vplib:custom_crafting/v1/block/table/gui/result/drop_item
 
 
 # Save data

@@ -1,0 +1,19 @@
+{
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:item_frame",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{CustomModelData:438900,display:{Name:'{\"text\":\"Universal Crafting Table\",\"italic\":false}'},EntityTag:{Tags:[\"twvp.place_block\",\"vplib.block.table\"],Invulnerable:1b,Invisible:1b,Fixed:1b,Silent:1b}}"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

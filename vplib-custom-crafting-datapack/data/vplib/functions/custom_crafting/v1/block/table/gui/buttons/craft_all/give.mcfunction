@@ -8,7 +8,7 @@ scoreboard players set #found_player vplib.temp 1
 setblock ~ 255 ~ minecraft:yellow_shulker_box
 
 data modify block ~ 255 ~ Items set from storage vplib:temp array
-execute positioned ~ ~0.5 ~ run loot spawn ~ ~ ~ mine ~ 255 ~ minecraft:air{drop_contents:1b}
+loot spawn ~ ~0.5 ~ mine ~ 255 ~ minecraft:air{drop_contents:1b}
 
 setblock ~ 255 ~ minecraft:air
 

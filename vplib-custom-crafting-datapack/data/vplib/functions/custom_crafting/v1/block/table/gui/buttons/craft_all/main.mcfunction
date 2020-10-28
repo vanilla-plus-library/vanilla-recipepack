@@ -20,14 +20,16 @@ function #vplib:custom_crafting/api/table/crafted
 # Get output amount(recipe output count * crafted amount)
 execute store result score #output vplib.temp run data get storage vplib:temp savedData.recipeOutput.Count
 scoreboard players operation #output vplib.temp *= #crafted vplib.temp
+#tellraw @a ["Output: ",{"score": {"name": "#output","objective": "vplib.temp"}}]
 
 # Generate items
 data modify storage vplib:temp array set value []
 
 scoreboard players set #127 vplib.math 127
 scoreboard players set #slot vplib.temp -1
-execute if score #output vplib.temp matches 1.. run function vplib:custom_crafting/v1/block/table/gui/buttons/craft_all/loop
-
+scoreboard players operation #loop vplib.temp = #output vplib.temp
+execute if score #loop vplib.temp matches 1.. run function vplib:custom_crafting/v1/block/table/gui/buttons/craft_all/loop
+#tellraw @a ["Items: ",{"nbt":"array","storage": "vplib:temp"}]
 
 # Search players
 scoreboard players set #found_player vplib.temp 0

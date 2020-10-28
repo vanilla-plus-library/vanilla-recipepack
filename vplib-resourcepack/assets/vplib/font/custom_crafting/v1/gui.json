@@ -2,7 +2,7 @@
     "providers": [
         {
             "type": "bitmap",
-            "file": "vplib:custom_crafting/v1/space_split.png",
+            "file": "vplib:custom_crafting/v1/gui/space_split.png",
             "ascent": -32768,
             "height": -10,
             "chars": [
@@ -11,7 +11,7 @@
         },
         {
             "type": "bitmap",
-            "file": "vplib:custom_crafting/v1/gui.png",
+            "file": "vplib:custom_crafting/v1/gui/crafting.png",
             "ascent": 13,
             "height": 256,
             "chars": [
@@ -20,7 +20,7 @@
         },
         {
             "type": "bitmap",
-            "file": "vplib:custom_crafting/v1/space_split.png",
+            "file": "vplib:custom_crafting/v1/gui/space_split.png",
             "ascent": -32768,
             "height": -130,
             "chars": [
@@ -29,7 +29,7 @@
         },
         {
             "type": "bitmap",
-            "file": "vplib:custom_crafting/v1/space_split.png",
+            "file": "vplib:custom_crafting/v1/gui/space_split.png",
             "ascent": -32768,
             "height": -34,
             "chars": [
@@ -38,7 +38,7 @@
         },
         {
             "type": "bitmap",
-            "file": "vplib:custom_crafting/v1/space_split.png",
+            "file": "vplib:custom_crafting/v1/gui/space_split.png",
             "ascent": -32768,
             "height": -6,
             "chars": [

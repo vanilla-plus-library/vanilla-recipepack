@@ -1,0 +1,6 @@
+{
+	"parent": "item/generated",
+	"textures": {
+		"layer0": "vplib:custom_crafting/v1/gui/slot_holder"
+	}
+}

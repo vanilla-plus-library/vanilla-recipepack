@@ -21,7 +21,6 @@ data remove storage vplib:temp array[{Slot:13b}]
 data remove storage vplib:temp array[{Slot:20b}]
 data remove storage vplib:temp array[{Slot:21b}]
 data remove storage vplib:temp array[{Slot:22b}]
-data modify storage vplib:temp array append from storage vplib:temp item
 
 # Remove output
 data remove storage vplib:temp array[{Slot:16b}]
@@ -36,23 +35,23 @@ clear @a[distance=..8] minecraft:gray_stained_glass_pane{vplib:{slot_holder:1b}}
 
 
 # Set slot holders
-replaceitem block ~ ~ ~ container.0 minecraft:gray_stained_glass_pane{HideFlags:63,CustomModelData:430000,vplib:{slot_holder:1b,type:1b},display:{Name:'""'}}
-replaceitem block ~ ~ ~ container.1 minecraft:gray_stained_glass_pane{HideFlags:63,CustomModelData:430000,vplib:{slot_holder:1b,type:1b},display:{Name:'""'}}
-replaceitem block ~ ~ ~ container.5 minecraft:gray_stained_glass_pane{HideFlags:63,CustomModelData:430000,vplib:{slot_holder:1b,type:1b},display:{Name:'""'}}
-replaceitem block ~ ~ ~ container.6 minecraft:gray_stained_glass_pane{HideFlags:63,CustomModelData:430000,vplib:{slot_holder:1b,type:1b},display:{Name:'""'}}
-replaceitem block ~ ~ ~ container.7 minecraft:gray_stained_glass_pane{HideFlags:63,CustomModelData:430000,vplib:{slot_holder:1b,type:1b},display:{Name:'""'}}
-replaceitem block ~ ~ ~ container.8 minecraft:gray_stained_glass_pane{HideFlags:63,CustomModelData:430000,vplib:{slot_holder:1b,type:1b},display:{Name:'""'}}
-replaceitem block ~ ~ ~ container.9 minecraft:gray_stained_glass_pane{HideFlags:63,CustomModelData:430000,vplib:{slot_holder:1b,type:1b},display:{Name:'""'}}
-replaceitem block ~ ~ ~ container.10 minecraft:gray_stained_glass_pane{HideFlags:63,CustomModelData:430000,vplib:{slot_holder:1b,type:1b},display:{Name:'""'}}
-replaceitem block ~ ~ ~ container.14 minecraft:gray_stained_glass_pane{HideFlags:63,CustomModelData:430000,vplib:{slot_holder:1b,type:1b},display:{Name:'""'}}
-replaceitem block ~ ~ ~ container.15 minecraft:gray_stained_glass_pane{HideFlags:63,CustomModelData:430000,vplib:{slot_holder:1b,type:1b},display:{Name:'""'}}
-replaceitem block ~ ~ ~ container.17 minecraft:gray_stained_glass_pane{HideFlags:63,CustomModelData:430000,vplib:{slot_holder:1b,type:1b,clickEvent:"craft_all"},display:{Name:'{"text":"Craft all","italic":false}'}}
-replaceitem block ~ ~ ~ container.18 minecraft:gray_stained_glass_pane{HideFlags:63,CustomModelData:430000,vplib:{slot_holder:1b,type:1b},display:{Name:'""'}}
-replaceitem block ~ ~ ~ container.19 minecraft:gray_stained_glass_pane{HideFlags:63,CustomModelData:430000,vplib:{slot_holder:1b,type:1b},display:{Name:'""'}}
-replaceitem block ~ ~ ~ container.23 minecraft:gray_stained_glass_pane{HideFlags:63,CustomModelData:430000,vplib:{slot_holder:1b,type:1b},display:{Name:'""'}}
-replaceitem block ~ ~ ~ container.24 minecraft:gray_stained_glass_pane{HideFlags:63,CustomModelData:430000,vplib:{slot_holder:1b,type:1b},display:{Name:'""'}}
-replaceitem block ~ ~ ~ container.25 minecraft:gray_stained_glass_pane{HideFlags:63,CustomModelData:430000,vplib:{slot_holder:1b,type:1b},display:{Name:'""'}}
-replaceitem block ~ ~ ~ container.26 minecraft:gray_stained_glass_pane{HideFlags:63,CustomModelData:430000,vplib:{slot_holder:1b,type:1b},display:{Name:'""'}}
+replaceitem block ~ ~ ~ container.0 minecraft:gray_stained_glass_pane{HideFlags:63,CustomModelData:438900,vplib:{slot_holder:1b,type:1b},display:{Name:'""'}}
+replaceitem block ~ ~ ~ container.1 minecraft:gray_stained_glass_pane{HideFlags:63,CustomModelData:438900,vplib:{slot_holder:1b,type:1b},display:{Name:'""'}}
+replaceitem block ~ ~ ~ container.5 minecraft:gray_stained_glass_pane{HideFlags:63,CustomModelData:438900,vplib:{slot_holder:1b,type:1b},display:{Name:'""'}}
+replaceitem block ~ ~ ~ container.6 minecraft:gray_stained_glass_pane{HideFlags:63,CustomModelData:438900,vplib:{slot_holder:1b,type:1b},display:{Name:'""'}}
+replaceitem block ~ ~ ~ container.7 minecraft:gray_stained_glass_pane{HideFlags:63,CustomModelData:438900,vplib:{slot_holder:1b,type:1b},display:{Name:'""'}}
+replaceitem block ~ ~ ~ container.8 minecraft:gray_stained_glass_pane{HideFlags:63,CustomModelData:438900,vplib:{slot_holder:1b,type:1b},display:{Name:'""'}}
+replaceitem block ~ ~ ~ container.9 minecraft:gray_stained_glass_pane{HideFlags:63,CustomModelData:438900,vplib:{slot_holder:1b,type:1b},display:{Name:'""'}}
+replaceitem block ~ ~ ~ container.10 minecraft:gray_stained_glass_pane{HideFlags:63,CustomModelData:438900,vplib:{slot_holder:1b,type:1b},display:{Name:'""'}}
+replaceitem block ~ ~ ~ container.14 minecraft:gray_stained_glass_pane{HideFlags:63,CustomModelData:438900,vplib:{slot_holder:1b,type:1b},display:{Name:'""'}}
+replaceitem block ~ ~ ~ container.15 minecraft:gray_stained_glass_pane{HideFlags:63,CustomModelData:438900,vplib:{slot_holder:1b,type:1b},display:{Name:'""'}}
+replaceitem block ~ ~ ~ container.17 minecraft:gray_stained_glass_pane{HideFlags:63,CustomModelData:438900,vplib:{slot_holder:1b,type:1b,clickEvent:"craft_all"},display:{Name:'{"text":"Craft all","italic":false}'}}
+replaceitem block ~ ~ ~ container.18 minecraft:gray_stained_glass_pane{HideFlags:63,CustomModelData:438900,vplib:{slot_holder:1b,type:1b},display:{Name:'""'}}
+replaceitem block ~ ~ ~ container.19 minecraft:gray_stained_glass_pane{HideFlags:63,CustomModelData:438900,vplib:{slot_holder:1b,type:1b},display:{Name:'""'}}
+replaceitem block ~ ~ ~ container.23 minecraft:gray_stained_glass_pane{HideFlags:63,CustomModelData:438900,vplib:{slot_holder:1b,type:1b},display:{Name:'""'}}
+replaceitem block ~ ~ ~ container.24 minecraft:gray_stained_glass_pane{HideFlags:63,CustomModelData:438900,vplib:{slot_holder:1b,type:1b},display:{Name:'""'}}
+replaceitem block ~ ~ ~ container.25 minecraft:gray_stained_glass_pane{HideFlags:63,CustomModelData:438900,vplib:{slot_holder:1b,type:1b},display:{Name:'""'}}
+replaceitem block ~ ~ ~ container.26 minecraft:gray_stained_glass_pane{HideFlags:63,CustomModelData:438900,vplib:{slot_holder:1b,type:1b},display:{Name:'""'}}
 
 # Update container
 data modify storage vplib:temp container set from block ~ ~ ~ Items

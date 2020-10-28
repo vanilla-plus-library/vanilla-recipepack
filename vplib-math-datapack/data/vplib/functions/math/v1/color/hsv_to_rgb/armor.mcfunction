@@ -1,6 +1,5 @@
 #> vplib:math/v1/color/hsv_to_rgb/armor
 
-tellraw @a [{"text":"\n\n\n\n\n\n\n\n\n\n"}]
 # Clear box
 data remove block -30000000 0 4320 Items
 
@@ -12,7 +11,7 @@ replaceitem block -30000000 0 4320 container.3 minecraft:leather_helmet{display:
 
 # Loop color
 scoreboard players operation $color vplib.math += $color_rate vplib.math
-execute unless score $color vplib.math matches 0..3599 run scoreboard players set $color vplib.math 0
+execute if score $color vplib.math matches 3600.. run scoreboard players remove $color vplib.math 3600
 
 # Fading saturation
 execute unless entity @p[tag=vplib.sat_down] run scoreboard players operation $saturation vplib.math += $saturation_rate vplib.math
