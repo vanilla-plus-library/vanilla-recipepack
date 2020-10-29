@@ -3,16 +3,16 @@
 # Dependencies
 scoreboard players set #load vplib.load 1
 
+## 1.16
+scoreboard players set #1.16 vplib.load 0
+function vplib:core/v1/core/check_1.16
+execute if score #1.16 vplib.load matches 0 run scoreboard players set #load vplib.load 0
+
 ## Missing core
 scoreboard players set #expected.vplib.core vplib.load 1
 
 execute unless score #vplib.core.current vplib.load >= #expected.vplib.core vplib.load run scoreboard players set #load vplib.load -1
 execute if score #vplib.core.breaking vplib.load > #expected.vplib.core vplib.load run scoreboard players set #load vplib.load -2
-
-## 1.16
-scoreboard players set #1.16 vplib.load 0
-function vplib:core/v1/core/check_1.16
-execute if score #1.16 vplib.load matches 0 run scoreboard players set #load vplib.load 0
 
 
 # Success
@@ -28,4 +28,4 @@ execute if score #load vplib.load matches -2 run tellraw @a [{"text":"[Debug]: "
 ## Reset loaded version
 execute unless score #load vplib.load matches 1 run scoreboard players reset #vplib.custom_crafting.current vplib.load
 execute unless score #load vplib.load matches 1 run scoreboard players reset #vplib.custom_crafting.breaking vplib.load
-execute unless score #load vplib.load matches 1 run data remove storage vplib:data modules."custom_crafting".version
+execute unless score #load vplib.load matches 1 run data remove storage vplib:data modules.custom_crafting.version
