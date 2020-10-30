@@ -1,6 +1,6 @@
 {
     "pack": {
         "pack_format": 6,
-        "description": "Vanilla+ Lib"
+        "description": [{"text":"Vanilla+ Library","color":"green"},{"text":"\nResource Pack","color":"gray"}]
     }
 }

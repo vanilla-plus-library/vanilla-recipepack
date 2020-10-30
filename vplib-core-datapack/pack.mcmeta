@@ -1,1 +1,6 @@
-{"pack":{"pack_format":6,"description":"Vanilla+ Library\nBy TheWii"}}
+{
+    "pack": {
+        "pack_format": 6,
+        "description": [{"text":"Vanilla+ Library","color":"green"},{"text":"\nCore","color":"gray"}]
+    }
+}

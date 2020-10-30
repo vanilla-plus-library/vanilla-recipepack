@@ -20,19 +20,10 @@ tellraw @a[tag=vplib.debug] [{"text":"[Debug]: ","color":"yellow","bold":true},{
 scoreboard objectives add vplib.data dummy
 scoreboard objectives add vplib.temp dummy
 scoreboard objectives add vplib.math dummy
+scoreboard objectives add vplib.id dummy
 
 
 # Forceloaded chunk
-forceload add -30000000 4320
-
-setblock -30000000 0 4320 minecraft:yellow_shulker_box
-setblock -30000000 0 4321 minecraft:oak_sign
-setblock -30000000 0 4322 minecraft:hopper
-setblock -30000000 0 4323 minecraft:dropper
-
-setblock -30000000 1 4320 minecraft:bedrock
-setblock -30000000 1 4321 minecraft:bedrock
-setblock -30000000 1 4322 minecraft:bedrock
-setblock -30000000 1 4323 minecraft:bedrock
-
-summon minecraft:armor_stand 30000000 0 4320 {Tags:["vplib.entity"],UUID:[I; 67, 0, 0, 0],Marker:1b,Small:1b,Invisible:1b,NoGravity:1b}
+execute in minecraft:overworld run function vplib:core/v1/core/set_chunk
+execute in minecraft:the_nether run function vplib:core/v1/core/set_chunk
+execute in minecraft:the_end run function vplib:core/v1/core/set_chunk

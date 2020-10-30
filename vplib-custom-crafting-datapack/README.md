@@ -6,6 +6,7 @@ Provides a custom crafting library for data packs to use. It's designed to work 
 
 - Minecraft 1.16+;
 - [Vanilla+ Library: Core](https://github.com/TheWii/vanilla-plus-library/tree/master/vplib-core-datapack)
+- [Vanilla+ Library: Block Placement(Optional)](https://github.com/TheWii/vanilla-plus-library/tree/master/vplib-block-placement-datapack)
 
 ## Releases
 - v1(latest)
