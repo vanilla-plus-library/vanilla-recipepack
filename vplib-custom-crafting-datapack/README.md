@@ -1,6 +1,6 @@
 # Vanilla+ Library: Custom Crafting
 
-Provides a custom crafting library for data packs to use. It's designed to work as an universal crafting system, but if users don't feel like sharing the same custom crafting table, they may embed this module within their namespace and rename all storages and objectives. Recipes are completely customizable, it usually is a single mcfunction file referenced in a function tag provided by the library, it doesn't enforce what method a recipe uses to check the conditions as long as it has an output and a registered recipe ID(although the structure must follow some rules).
+Provides a custom crafting library for data packs to use. It's designed to work as an universal crafting system, but if users don't feel like sharing the same custom crafting table, they may embed this module within their namespace and rename all storages and objectives. Recipes are completely customizable, it usually is a single mcfunction file referenced in a function tag provided by the library, it doesn't enforce what method a recipe uses to check the conditions as long as it has an output and a registered recipe ID(although the structure must follow some rules). This module has a soft dependecy for Block Placement module(i.e will work correctly if it's missing), but it is required for the vanilla gameplay, otherwise players won't be able to place the custom block.
 
 ## Requirements
 
@@ -9,7 +9,7 @@ Provides a custom crafting library for data packs to use. It's designed to work 
 - [Vanilla+ Library: Block Placement(Optional)](https://github.com/TheWii/vanilla-plus-library/tree/master/vplib-block-placement-datapack)
 
 ## Releases
-- v1(latest)
+- [v1(latest)](https://github.com/TheWii/vanilla-plus-library/raw/master/releases/custom-crafting/vplib-custom-crafting-datapack-v1.zip)
 
 ## Documentation
 
