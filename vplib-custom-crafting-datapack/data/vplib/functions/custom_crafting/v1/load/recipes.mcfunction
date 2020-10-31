@@ -23,6 +23,7 @@ execute if score #vplib.load vplib.recipe matches 7 run function #vplib:custom_c
 execute if score #vplib.load vplib.recipe matches 8 run function #vplib:custom_crafting/api/table/recipes/8
 execute if score #vplib.load vplib.recipe matches 9 run function #vplib:custom_crafting/api/table/recipes/9
 execute if score #vplib.load vplib.recipe matches 10 run function #vplib:custom_crafting/api/table/recipes/any
+execute if score #vplib.load vplib.recipe matches 11 run function #vplib:custom_crafting/api/table/register
 
 # DEBUG Message
-execute if score #vplib.load vplib.recipe matches 10 run tellraw @a[tag=vplib.debug] [{"text":"[Debug]: ","color":"yellow","bold":true},{"score":{"name":"$register","objective": "vplib.recipe"},"color":"white","bold":false},{"text":" recipes loaded.","color":"white","bold":false}]
+execute if score #vplib.load vplib.recipe matches 11 run tellraw @a[tag=vplib.debug] [{"text":"[Debug]: ","color":"yellow","bold":true},{"score":{"name":"$register","objective": "vplib.recipe"},"color":"white","bold":false},{"text":" recipes loaded.","color":"white","bold":false}]
