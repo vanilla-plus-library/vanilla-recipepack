@@ -1,0 +1,7 @@
+{
+    "values": [
+        "vplib:recipes/custom/sheared_wool",
+        
+        "#vplib:recipes/vanilla/2_slots"
+    ]
+}
