@@ -4,9 +4,7 @@
 data modify storage vplib:temp ignoredSlots append from storage vplib:temp containerGrid[{id:"minecraft:shears"}].Slot
 
 # Count wools(since the shears is a tool, its count is 1 and the craft all feature will always get the lowest count in the grid)
-execute if score #button.craft_all vplib.temp matches 1 run data modify storage vplib:temp item set from storage vplib:temp containerGrid
-execute if score #button.craft_all vplib.temp matches 1 run data remove storage vplib:temp item[{id:"minecraft:shears"}]
-execute if score #button.craft_all vplib.temp matches 1 store result score #crafted vplib.temp run data get storage vplib:temp item[0].Count
+execute if score #button.craft_all vplib.temp matches 1 store result score #crafted vplib.temp run data get storage vplib:temp recipeInput[{id:"minecraft:white_wool"}].Count
 
 # Get shears damage
 execute store result score #damage vplib.temp run data get storage vplib:temp containerGrid[{id:"minecraft:shears"}].tag.Damage

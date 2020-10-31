@@ -7,6 +7,7 @@ scoreboard players set #save_data vplib.temp 0
 
 
 # Get saved data(last grid and result).
+data modify storage vplib:temp savedData set value {recipeInput:[],recipeOutput:{}}
 data modify storage vplib:temp savedData set from entity @s ArmorItems[3].tag.vplib
 
 # Move container to storage.

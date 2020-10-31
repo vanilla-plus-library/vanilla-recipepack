@@ -2,7 +2,7 @@
 
 # Increase
 scoreboard players add #vplib.load vplib.recipe 1
-execute unless score #vplib.load vplib.recipe matches 1..10 run scoreboard players reset #vplib.load vplib.recipe
+execute unless score #vplib.load vplib.recipe matches 1..11 run scoreboard players reset #vplib.load vplib.recipe
 
 # Schedule next tick
 execute if score #vplib.load vplib.recipe matches 1.. run schedule function vplib:custom_crafting/v1/load/recipes 1t replace
