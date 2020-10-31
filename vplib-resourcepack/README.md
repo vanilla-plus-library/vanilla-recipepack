@@ -6,4 +6,4 @@ Vanilla+ Library Resource Pack used by some modules.
 - Minecraft 1.16+.
 
 ## Releases
-- v1(incomplete)
+- v1(latest)

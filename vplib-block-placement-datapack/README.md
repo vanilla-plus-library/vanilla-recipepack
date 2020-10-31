@@ -7,4 +7,4 @@ Add a mechanic to simulate block placements using item frames and blast furnaces
 - [Vanilla+ Library: Core](https://github.com/TheWii/vanilla-plus-library/tree/master/vplib-core-datapack)
 
 ## Releases
-- v1(latest)
+- v1(incomplete)
