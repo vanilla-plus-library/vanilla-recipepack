@@ -1,6 +1,6 @@
 # Vanilla+ Library
 
-Vanilla+ Library is a library data pack for Minecraft 1.16+. Its functionalities are divided into multiple modules that can be installed independently from each other. It aims to provide efficient tools for data packs to add custom features to the vanilla gameplay with ease. With this library the user would be able to:
+Vanilla+ Library is a library data pack for Minecraft 1.15+. Its functionalities are divided into multiple modules that can be installed independently from each other. It aims to provide efficient tools for data packs to add custom features to the vanilla gameplay with ease. With this library the user would be able to:
 - Add custom recipes using a powerful custom crafting library;
 - Use math functions such as pRNG and sqrt;
 - Simulate custom block placement;
@@ -11,3 +11,12 @@ Vanilla+ Library is a library data pack for Minecraft 1.16+. Its functionalities
 The current available modules are:
 - [Core](https://github.com/TheWii/vanilla-plus-library/tree/master/vplib-core-datapack)
 - [Custom Crafting](https://github.com/TheWii/vanilla-plus-library/tree/master/vplib-custom-crafting-datapack)
+- [Block Placement](https://github.com/TheWii/vanilla-plus-library/tree/master/vplib-block-placement-datapack)
+- [Math(incomplete)](https://github.com/TheWii/vanilla-plus-library/tree/master/vplib-math-datapack)
+- [Click Detection(incomplete)](https://github.com/TheWii/vanilla-plus-library/tree/master/vplib-click-detection-datapack)
+- Inventory(coming soon)
+- Raycasting(coming soon)
+
+Additional:
+- [Resource Pack](https://github.com/TheWii/vanilla-plus-library/tree/master/vplib-resourcepack)
+- [Vanilla Recipe Pack](https://github.com/TheWii/vanilla-plus-library/tree/master/vplib-vanilla-recipepack)

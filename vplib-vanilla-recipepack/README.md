@@ -8,4 +8,4 @@ This is a datapack containing all vanilla recipes for the Universal Crafting Tab
 
 
 ## Releases
-- v1(incomplete)
+- [v1(latest)](https://github.com/TheWii/vanilla-plus-library/raw/master/releases/vanilla-recipepack/vplib-vanilla-recipepack-v1.zip)

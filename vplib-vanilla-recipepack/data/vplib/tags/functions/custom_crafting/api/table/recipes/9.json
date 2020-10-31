@@ -1,6 +1,5 @@
 {
     "values": [
-        "vplib:recipes/custom/dense_beacon",
         "vplib:recipes/custom/universal_crafting_table",
 
         "#vplib:recipes/vanilla/9_slots"

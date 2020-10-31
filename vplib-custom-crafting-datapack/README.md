@@ -13,6 +13,8 @@ Provides a custom crafting library for data packs to use. It's designed to work 
 
 ## Documentation
 
+The Universal Crafting Table can be crafted in a normal Crafting Table in the survival. An alternative way to place the block is running the function tag `#vplib:custom_crafting/api/table/place`(cheats required).
+
 ### Recipe ID
 
 The library keeps the objective `vplib.recipe` for the users to register their recipes, inside the recipe file, you would only need a single line:

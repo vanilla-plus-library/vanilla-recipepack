@@ -1,10 +1,26 @@
-# SHAPED (7 slots)
+# SHAPED WITH ITEM TAGS(9 slots)
+# This type of recipe is intensive, avoid having too many recipes with 
+# item tags, less than 20 in the same function tag(1-9 slots) is reasonable.
 
 # Register
 execute unless score #vplib.universal_crafting_table vplib.recipe matches 1.. store result score #vplib.universal_crafting_table vplib.recipe run scoreboard players add $register vplib.recipe 1
 
 # Condition
-execute if score #recipe vplib.temp matches 0 if data storage vplib:temp {recipeInput:[{Slot:2b,id:"minecraft:stone"},{Slot:3b,id:"minecraft:stone"},{Slot:4b,id:"minecraft:stone"},{Slot:11b,id:"minecraft:oak_planks"},{Slot:12b,id:"minecraft:crafting_table"},{Slot:13b,id:"minecraft:oak_planks"},{Slot:20b,id:"minecraft:oak_planks"},{Slot:21b,id:"minecraft:iron_ingot"},{Slot:22b,id:"minecraft:oak_planks"}]} run scoreboard players operation #recipe vplib.temp = #vplib.universal_crafting_table vplib.recipe
+execute if score #recipe vplib.temp matches 0 run data remove storage vplib:temp item
+
+execute if score #recipe vplib.temp matches 0 store success score #matched vplib.temp run data modify storage vplib:temp item set from storage vplib:temp recipeInput[{Slot:11b}]
+execute if score #recipe vplib.temp matches 0 if score #matched vplib.temp matches 1 run function vplib:recipes/vanilla/item_tags/planks
+
+execute if score #recipe vplib.temp matches 0 if score #matched vplib.temp matches 1 store success score #matched vplib.temp run data modify storage vplib:temp item set from storage vplib:temp recipeInput[{Slot:13b}]
+execute if score #recipe vplib.temp matches 0 if score #matched vplib.temp matches 1 run function vplib:recipes/vanilla/item_tags/planks
+
+execute if score #recipe vplib.temp matches 0 if score #matched vplib.temp matches 1 store success score #matched vplib.temp run data modify storage vplib:temp item set from storage vplib:temp recipeInput[{Slot:20b}]
+execute if score #recipe vplib.temp matches 0 if score #matched vplib.temp matches 1 run function vplib:recipes/vanilla/item_tags/planks
+
+execute if score #recipe vplib.temp matches 0 if score #matched vplib.temp matches 1 store success score #matched vplib.temp run data modify storage vplib:temp item set from storage vplib:temp recipeInput[{Slot:22b}]
+execute if score #recipe vplib.temp matches 0 if score #matched vplib.temp matches 1 run function vplib:recipes/vanilla/item_tags/planks
+
+execute if score #recipe vplib.temp matches 0 if score #matched vplib.temp matches 1 if data storage vplib:temp {recipeInput:[{Slot:2b,id:"minecraft:stone"},{Slot:3b,id:"minecraft:stone"},{Slot:4b,id:"minecraft:stone"},{Slot:12b,id:"minecraft:crafting_table"},{Slot:21b,id:"minecraft:iron_ingot"}]} run scoreboard players operation #recipe vplib.temp = #vplib.universal_crafting_table vplib.recipe
 
 # Output
-execute if score #recipe vplib.temp = #vplib.universal_crafting_table vplib.recipe run data modify storage vplib:temp recipeOutput set value {id:"minecraft:item_frame",Count:1b,tag:{CustomModelData:438900,display:{Name:'{"text":"Universal Crafting Table","italic":false}'},EntityTag:{Tags:["vplib.place_block","vplib.block.table"],Invulnerable:1b,Invisible:1b,Fixed:1b,Silent:1b}}}
+execute if score #recipe vplib.temp = #vplib.universal_crafting_table vplib.recipe run data modify storage vplib:temp recipeOutput set from storage vplib:data custom_crafting.items.universal_crafting_table
