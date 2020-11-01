@@ -47,7 +47,7 @@ clear @a[distance=..8] minecraft:gray_stained_glass_pane{vplib:{slot_holder:1b}}
 # Reset slot holders / Barrel name
 
 # Default barrel name(GUI TEXTURE)
-data modify storage vplib:temp json set value ['[{"translate":"vplib.gui.universal_crafting_table","font":"vplib:custom_crafting/v1/gui","color":"white","italic":false,"bold":false}]']
+data modify storage vplib:temp json set value ['[{"translate":"space.-8","font":"space:default","color":"white"},{"text":"\\ue001","font":"vplib:custom_crafting/v1/gui"},{"translate":"space.-172","font":"space:default"}]']
 
 ## Reset ignored slots
 data remove storage vplib:temp ignoredSlots
@@ -78,7 +78,8 @@ execute unless data storage vplib:temp {ignoredSlots:[26b]} run replaceitem bloc
 data modify storage vplib:temp container set from block ~ ~ ~ Items
 
 ## Rename barrel(RESOLVE JSON)
-data modify storage vplib:temp json append value '{"translate":"vplib.block.universal_crafting_table","font":"minecraft:default","color":"dark_gray"}'
+data modify storage vplib:temp json append value '[{"translate":"space.8","font":"space:default"},{"translate":"vplib.block.universal_crafting_table","font":"minecraft:default","color":"dark_gray"}]'
+#tellraw @a {"nbt":"json","storage":"vplib:temp"}
 
 execute positioned ~ 255 ~ run function vplib:custom_crafting/v1/block/table/general/resolve_json
 data modify block ~ ~ ~ CustomName set from storage vplib:temp resolvedJson
