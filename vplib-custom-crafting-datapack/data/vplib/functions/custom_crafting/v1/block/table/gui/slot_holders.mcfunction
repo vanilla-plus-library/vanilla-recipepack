@@ -7,7 +7,7 @@
 scoreboard players set #button_clicked vplib.temp 0
 
 ## Craft all
-execute if score @s vplib.data matches 1.. unless data storage vplib:temp {container:[{Slot:17b,tag:{vplib:{clickEvent:"craft_all"}}}]} run function vplib:custom_crafting/v1/block/table/gui/buttons/craft_all/check_container
+execute if score @s vplib.data matches 1.. unless data storage vplib:temp container[{Slot:17b}] run function vplib:custom_crafting/v1/block/table/gui/buttons/craft_all/check_container
 
 ## Third party buttons(Let addons perform custom buttons)
 function #vplib:custom_crafting/api/table/gui/buttons
