@@ -9,7 +9,7 @@ execute unless score #vanilla.jungle_planks vplib.recipe matches 1.. store resul
 execute if score #recipe vplib.temp matches 0 run data remove storage vplib:temp item
 
 execute if score #recipe vplib.temp matches 0 store success score #matched vplib.temp run data modify storage vplib:temp item set from storage vplib:temp recipeInput[0]
-execute if score #recipe vplib.temp matches 0 run function vplib:recipes/vanilla/item_tags/jungle_logs
+execute if score #recipe vplib.temp matches 0 if score #matched vplib.temp matches 1 run function vplib:recipes/vanilla/item_tags/jungle_logs
 
 execute if score #recipe vplib.temp matches 0 if score #matched vplib.temp matches 1 run scoreboard players operation #recipe vplib.temp = #vanilla.jungle_planks vplib.recipe
 
