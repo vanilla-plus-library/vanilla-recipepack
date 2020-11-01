@@ -9,7 +9,7 @@
                     "functions": [
                         {
                             "function": "minecraft:set_nbt",
-                            "tag": "{CustomModelData:438900,display:{Name:'{\"text\":\"Universal Crafting Table\",\"italic\":false}'},EntityTag:{Tags:[\"vplib.place_block\",\"vplib.block.table\"],Invulnerable:1b,Invisible:1b,Fixed:1b,Silent:1b}}"
+                            "tag": "{CustomModelData:438900,display:{Name:'{\"translate\":\"vplib.block.universal_crafting_table\",\"italic\":false}'},EntityTag:{Tags:[\"vplib.place_block\",\"vplib.block.table\"],Invulnerable:1b,Invisible:1b,Fixed:1b,Silent:1b}}"
                         }
                     ]
                 }

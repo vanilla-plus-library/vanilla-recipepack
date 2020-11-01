@@ -10,11 +10,11 @@ function vplib:custom_crafting/v1/block/table/general/get_grid
 function vplib:custom_crafting/v1/block/table/general/get_result
 
 
-# Check if grid changed
+# Check if grid slots changed
 data modify storage vplib:temp compare set from storage vplib:temp containerGrid
 execute store result score #grid_changed vplib.temp run data modify storage vplib:temp compare set from storage vplib:temp savedData.recipeInput
 
-# Check if grid changed
+# Check if result slot changed
 data modify storage vplib:temp compare set from storage vplib:temp containerResult
 execute store result score #result_changed vplib.temp run data modify storage vplib:temp compare set from storage vplib:temp savedData.recipeOutput
 

@@ -1,7 +1,7 @@
 #> vplib:custom_crafting/v1/block/table/gui/crafted
 #say DEBUG Crafted.
 
-# Get grid early for this proccess
+# Get grid early for this process
 function vplib:custom_crafting/v1/block/table/general/get_grid
 
 # Reset ignore list
@@ -11,7 +11,7 @@ data remove storage vplib:temp ignoredSlots
 scoreboard players operation #recipe vplib.temp = @s vplib.data
 scoreboard players set #crafted vplib.temp 1
 scoreboard players set #button.craft_all vplib.temp 0
-function #vplib:custom_crafting/api/table/crafted
+function #vplib:custom_crafting/api/table/recipes/crafted
 
 # Consume grid items(default)
 execute unless data storage vplib:temp {ignoredSlots:[2b]} if data storage vplib:temp containerGrid[{Slot:2b}] store result block ~ ~ ~ Items[{Slot:2b}].Count byte 1 run data get storage vplib:temp containerGrid[{Slot:2b}].Count 0.9999999999

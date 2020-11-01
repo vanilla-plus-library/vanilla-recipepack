@@ -3,7 +3,6 @@
 #tellraw @a ["Comparing recipe output:",{"nbt":"savedData.recipeOutput","storage": "vplib:temp"}]
 
 # Get slot in container
-data remove storage vplib:temp compare
 data modify storage vplib:temp compare set from storage vplib:temp containerResult
 
 # Compare with recipe output

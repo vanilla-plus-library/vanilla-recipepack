@@ -52,16 +52,16 @@ execute if score #recipe vplib.temp = #example.emerald_shovel vplib.recipe run d
 
 Just creating the recipe file isn't enough, we need to find a way for the library to reach those files, that's easily achieved by including the function to a function tag. The recipes are separated into 10 function tags that are called based on the amount of items in the grid, the user only needs to include their function in the correct tag. This prevents the library from unnecessarily checking recipes that doesn't match the number of occupied slots in the grid. In addition, if no recipe has been found, it calls a function tag for recipes that don't have a fixed slot count, for these recipes the slot amount can checked from the score `#amount vplib.temp`(Normally you won't use this tag, but it's useful for recipes with special behaviours). The available function tags are:
 
-- `#vplib:custom_crafting/api/table/recipes/1`
-- `#vplib:custom_crafting/api/table/recipes/2`
-- `#vplib:custom_crafting/api/table/recipes/3`
-- `#vplib:custom_crafting/api/table/recipes/4`
-- `#vplib:custom_crafting/api/table/recipes/5`
-- `#vplib:custom_crafting/api/table/recipes/6`
-- `#vplib:custom_crafting/api/table/recipes/7`
-- `#vplib:custom_crafting/api/table/recipes/8`
-- `#vplib:custom_crafting/api/table/recipes/9`
-- `#vplib:custom_crafting/api/table/recipes/any`
+- `#vplib:custom_crafting/api/table/recipes/check/1_slot`
+- `#vplib:custom_crafting/api/table/recipes/check/2_slots`
+- `#vplib:custom_crafting/api/table/recipes/check/3_slots`
+- `#vplib:custom_crafting/api/table/recipes/check/4_slots`
+- `#vplib:custom_crafting/api/table/recipes/check/5_slots`
+- `#vplib:custom_crafting/api/table/recipes/check/6_slots`
+- `#vplib:custom_crafting/api/table/recipes/check/7_slots`
+- `#vplib:custom_crafting/api/table/recipes/check/8_slots`
+- `#vplib:custom_crafting/api/table/recipes/check/9_slots`
+- `#vplib:custom_crafting/api/table/recipes/check/any_slots`
 
 ### Available data when checking recipes
 
@@ -77,7 +77,7 @@ Just creating the recipe file isn't enough, we need to find a way for the librar
 
 ### Crafting Functionalities
 
-The library calls the function tag `vplib:custom_crafting/api/table/crafted` when a crafting occurs, data packs might run a function from this tag where they check if the score `#recipe vplib.temp` matches one of the their recipe IDs and run additional commands for a specific recipe. By default, the library will consume every ingredient in the grid by 1, but if the recipe has a custom behaviour(tool durability, return empty buckets/glass bottles etc.) they can tell the library to ignore the slots by appending the slot number to the list `vplib:temp ignoredSlots`, . Here are some useful informations provided by the library for this process:
+The library calls the function tag `vplib:custom_crafting/api/table/recipes/crafted` when a crafting occurs, data packs might run a function from this tag where they check if the score `#recipe vplib.temp` matches one of the their recipe IDs and run additional commands for a specific recipe. By default, the library will consume every ingredient in the grid by 1, but if the recipe has a custom behaviour(tool durability, return empty buckets/glass bottles etc.) they can tell the library to ignore the slots by appending the slot number to the list `vplib:temp ignoredSlots`, . Here are some useful informations provided by the library for this process:
 
 |Type            |Location  |Name/Path                 |Description                                   |Permission    |
 |----------------|----------|--------------------------|----------------------------------------------|--------------|

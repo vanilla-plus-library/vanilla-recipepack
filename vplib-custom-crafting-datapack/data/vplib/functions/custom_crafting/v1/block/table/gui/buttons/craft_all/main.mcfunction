@@ -14,7 +14,7 @@ data remove storage vplib:temp ignoredSlots
 scoreboard players operation #recipe vplib.temp = @s vplib.data
 scoreboard players operation #crafted vplib.temp = #minimum vplib.temp
 scoreboard players set #button.craft_all vplib.temp 1
-function #vplib:custom_crafting/api/table/crafted
+function #vplib:custom_crafting/api/table/recipes/crafted
 
 
 # Get output amount(recipe output count * crafted amount)
