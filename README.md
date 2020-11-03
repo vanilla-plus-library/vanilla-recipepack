@@ -20,3 +20,4 @@ The current available modules are:
 Additional:
 - [Resource Pack](https://github.com/TheWii/vanilla-plus-library/tree/master/vplib-resourcepack)
 - [Vanilla Recipe Pack](https://github.com/TheWii/vanilla-plus-library/tree/master/vplib-vanilla-recipepack)
+- [Crafting Tweaks Addon](https://github.com/TheWii/vplib-crafting-tweaks)
