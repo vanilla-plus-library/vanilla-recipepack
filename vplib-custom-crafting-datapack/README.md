@@ -18,6 +18,8 @@ Provides a custom crafting library for data packs to use. It's designed to work 
 
 ## Documentation
 
+### Obtaining
+
 The Universal Crafting Table can be crafted in a normal Crafting Table in the survival. Get the item by running `/loot give @s loot vplib:custom_crafting/v1/block/universal_crafting_table`(cheats required). An alternative way to place the block is running the function tag `#vplib:custom_crafting/api/table/place`.
 
 | Ingredients                                         | Crafting Recipe                                     |
