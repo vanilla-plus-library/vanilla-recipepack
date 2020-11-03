@@ -52,7 +52,7 @@ execute unless score #example.emerald_shovel vplib.recipe matches 1.. store resu
 execute if score #recipe vplib.temp matches 0 if data storage vplib:temp {recipeInput:[{Slot:3b,id:"minecraft:emerald"},{Slot:12b,id:"minecraft:stick"},{Slot:21b,id:"minecraft:stick"}]} run scoreboard players operation #recipe vplib.temp = #example.emerald_shovel vplib.recipe
 
 # Output
-execute if score #recipe vplib.temp = #example.emerald_shovel vplib.recipe run data modify vplib:temp recipeOutput set value {id:"minecraft:diamond:shovel",Count:1b,tag:{CustomModelData:1,display:{Name:'{"text":"Emerald Shovel","italic":false}'}}}
+execute if score #recipe vplib.temp = #example.emerald_shovel vplib.recipe run data modify vplib:temp recipeOutput set value {id:"minecraft:diamond:shovel",Count:1b,tag:{Damage:0,CustomModelData:1,display:{Name:'{"text":"Emerald Shovel","italic":false}'}}}
 ```
 **NOTE:** The recipe ID must follow this format: `#<namespace>.<recipe>`. Prefix the recipe ID with `#<namespace>.` to avoid recipes sharing the same name. It's a good practice to keep the recipe ID and the file with the same name for consistency. Also be careful to not exceed the 40 characters limit that fake players have.:
 
