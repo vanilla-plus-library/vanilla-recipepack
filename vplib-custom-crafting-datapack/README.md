@@ -12,6 +12,10 @@ Provides a custom crafting library for data packs to use. It's designed to work 
 ## Releases
 - [v1(latest)](https://github.com/TheWii/vanilla-plus-library/raw/master/releases/custom-crafting/vplib-custom-crafting-datapack-v1.zip)
 
+## Addons
+- [Vanilla+ Library: Vanilla Recipe Pack](https://github.com/TheWii/vanilla-plus-library/tree/master/vplib-vanilla-recipepack)
+- [Vanilla+ Library: Crafting Tweaks](https://github.com/TheWii/vplib-crafting-tweaks)
+
 ## Documentation
 
 The Universal Crafting Table can be crafted in a normal Crafting Table in the survival. An alternative way to place the block is running the function tag `#vplib:custom_crafting/api/table/place`(cheats required).
