@@ -99,6 +99,6 @@ The library calls the function tag `vplib:custom_crafting/api/table/recipes/craf
 |Storage/List    |vplib:temp|savedData.recipeOutput    |The output from the current recipe.           |Read-only     |
 |Score/Int       |vplib.temp|#recipe                   |The ID from the current recipe.               |Read-only     |
 |Score/Boolean   |vplib.temp|#button.craft_all         |If triggered by the craft all button          |Read-only     |
-|Storage/List    |vplib:temp|ignoredSlots              |Grid slots that the library should ignore.    |Read-only     |
+|Storage/List    |vplib:temp|ignoredSlots              |Grid slots that the library should ignore.    |Read and write     |
 |Score/Int       |vplib.temp|#crafted                  |The number of craftings executed at once. Modify it to interfere in the crafting process(only works for craftings triggered by the craft all button)     |Read and write|
 |Block           |~ ~ ~     |Items                     |Modify the inventory directly from the block. |Read and write|
