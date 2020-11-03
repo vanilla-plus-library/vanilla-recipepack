@@ -18,7 +18,11 @@ Provides a custom crafting library for data packs to use. It's designed to work 
 
 ## Documentation
 
-The Universal Crafting Table can be crafted in a normal Crafting Table in the survival. An alternative way to place the block is running the function tag `#vplib:custom_crafting/api/table/place`(cheats required).
+The Universal Crafting Table can be crafted in a normal Crafting Table in the survival. Get the item by running `/loot give @s loot vplib:custom_crafting/v1/block/universal_crafting_table`(cheats required). An alternative way to place the block is running the function tag `#vplib:custom_crafting/api/table/place`.
+
+| Ingredients                                         | Crafting Recipe                                     |
+|-----------------------------------------------------|-----------------------------------------------------|
+|3 Stones + 4 Planks + 1 Crafting Table + 1 Iron Ingot|<img src=https://i.imgur.com/YiqEAcl.png width="366">|
 
 ### Recipe ID
 
