@@ -24,14 +24,14 @@ function vplib:custom_crafting/v1/block/table/general/get_result
 execute if score @s vplib.data matches 1.. unless entity @s[tag=vplib.recipe_changed] if data storage vplib:temp containerResult run function vplib:custom_crafting/v1/block/table/gui/result/compare
 tag @s remove vplib.recipe_changed
 
-# If a recipe is active, check if result slot is empty, if so consume ingredients.(force a grid update)
+# If a recipe is active, check if result slot is empty, if so consume ingredients.(force a grid update).
 execute if score @s vplib.data matches 1.. unless data storage vplib:temp containerResult run function vplib:custom_crafting/v1/block/table/gui/crafted
 
 
-# Get grid slots and remove item count.
+# Get grid slots.
 function vplib:custom_crafting/v1/block/table/general/get_grid
 
-# Check if grid slots changed since the last update
+# Check if grid slots changed since the last update.
 execute if score #update_grid vplib.temp matches 0 run data modify storage vplib:temp compare set from storage vplib:temp containerGrid
 execute if score #update_grid vplib.temp matches 0 store success score #update_grid vplib.temp run data modify storage vplib:temp compare set from storage vplib:temp savedData.recipeInput
 
@@ -39,13 +39,13 @@ execute if score #update_grid vplib.temp matches 0 store success score #update_g
 execute if score #update_grid vplib.temp matches 1 run function vplib:custom_crafting/v1/block/table/gui/grid/update
 
 
-# Show result(from recipe output)
+# Show result(from recipe output).
 execute if score #update_result vplib.temp matches 1 run function vplib:custom_crafting/v1/block/table/gui/result/show_output
 
-# Check if result slot holder changed
+# Check if result slot holder changed.
 execute if score #update_result vplib.temp matches 0 unless score @s vplib.data matches 1.. unless data storage vplib:temp containerResult{Count:1b,tag:{vplib:{slot_holder:1b,type:2b}}} run function vplib:custom_crafting/v1/block/table/gui/result/drop_item
 
 
-# Save data
+# Save data.
 #execute if score #save_data vplib.temp matches 1 run say Saving data.
 execute if score #save_data vplib.temp matches 1 run data modify entity @s ArmorItems[3].tag.vplib set from storage vplib:temp savedData

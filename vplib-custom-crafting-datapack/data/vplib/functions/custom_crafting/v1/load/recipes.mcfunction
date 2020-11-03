@@ -25,5 +25,8 @@ execute if score #vplib.load vplib.recipe matches 9 run function #vplib:custom_c
 execute if score #vplib.load vplib.recipe matches 10 run function #vplib:custom_crafting/api/table/recipes/check/any_slots
 execute if score #vplib.load vplib.recipe matches 11 run function #vplib:custom_crafting/api/table/recipes/register
 
+# Update GUIs
+execute if score #vplib.load vplib.recipe matches 11 as @e[type=minecraft:armor_stand,tag=vplib.block.universal_crafting_table] at @s run function vplib:custom_crafting/v1/block/table/gui/update
+
 # DEBUG Message
 execute if score #vplib.load vplib.recipe matches 11 run tellraw @a[tag=vplib.debug] [{"text":"[Debug]: ","color":"yellow","bold":true},{"score":{"name":"$register","objective": "vplib.recipe"},"color":"white","bold":false},{"text":" recipes loaded.","color":"white","bold":false}]
