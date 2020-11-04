@@ -1,23 +1,6 @@
-# Vanilla+ Library
+# Vanilla+ Library: Vanilla Recipe Pack
+This is a data pack containing all vanilla recipes for the Universal Crafting Table. It's not considered a module by itself, but an addon for the Custom Crafting module, also serving as a guide for users of this library to add their own custom recipes. If you are an user of the Custom Crafting library, I advise you to not directly merge this data pack to yours, but instead you can tell your data pack's users to download this recipe pack manually if they want to have access to vanilla recipes through the Universal Crafting Table.
 
-Vanilla+ Library is a library data pack for Minecraft 1.15+. Its functionalities are divided into multiple modules that can be installed independently from each other. It aims to provide efficient tools for data packs to add custom features to the vanilla gameplay with ease. With this library the user would be able to:
-- Add custom recipes using a powerful custom crafting library;
-- Use math functions such as pRNG and sqrt;
-- Simulate custom block placement;
-- Detect right-click using carrot on a stick/warped fungus on a stick or villagers;
-- Replace a specific item in the inventory of a player;
-- Custom durability for tools;
-
-The current available modules are:
-- [Core](https://github.com/TheWii/vanilla-plus-library/tree/master/vplib-core-datapack)
-- [Custom Crafting](https://github.com/TheWii/vanilla-plus-library/tree/master/vplib-custom-crafting-datapack)
-- [Block Placement](https://github.com/TheWii/vanilla-plus-library/tree/master/vplib-block-placement-datapack)
-- [Math(incomplete)](https://github.com/TheWii/vanilla-plus-library/tree/master/vplib-math-datapack)
-- [Click Detection(incomplete)](https://github.com/TheWii/vanilla-plus-library/tree/master/vplib-click-detection-datapack)
-- Inventory(coming soon)
-- Raycasting(coming soon)
-
-Additional:
-- [Resource Pack](https://github.com/TheWii/vanilla-plus-library/tree/master/vplib-resourcepack)
-- [Vanilla Recipe Pack](https://github.com/TheWii/vanilla-plus-library/tree/master/vplib-vanilla-recipepack)
-- [Crafting Tweaks Addon](https://github.com/TheWii/vplib-crafting-tweaks)
+## Requirements
+- Minecraft 1.16+
+- [Vanilla+ Library: Custom Crafting](https://github.com/vanilla-plus-library/custom-crafting)
