@@ -1,7 +1,10 @@
 {
     "pack": {
         "pack_format": 6,
-        "description": [{"text":"Vanilla+ Library","color":"green"},{"text":"\nVanilla Recipes","color":"gray"}]
-    }
+        "description": [{"text":"Vanilla+ Library","color":"green"},{"text":"\nVanilla Recipes __ver","color":"gray"}]
+    },
+    "release": {
+        "upload": true,
+        "name": "vplib-vanilla-recipepack-__ver"
     }
 }
